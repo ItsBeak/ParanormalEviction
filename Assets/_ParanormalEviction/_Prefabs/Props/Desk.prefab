@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &842629719286854903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370622735208407431}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 124.35756, y: 109.20331, z: 384.16998}
+  m_Center: {x: 0.0000038146973, y: 54.925728, z: 0.00006866455}
 --- !u!1 &1955848190031688779
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +22,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5665976497961419191}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,19 +44,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &842629719286854903
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1370622735208407431}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 124.35756, y: 109.20331, z: 384.16998}
-  m_Center: {x: 0.0000038146973, y: 54.925728, z: 0.00006866455}
 --- !u!1001 &2288963084458843350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -102,6 +102,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2b3b2a7495d3a304eb6a823fe8ad2d8e, type: 3}
       propertyPath: m_Name
       value: Desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b3b2a7495d3a304eb6a823fe8ad2d8e, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b3b2a7495d3a304eb6a823fe8ad2d8e, type: 3}
