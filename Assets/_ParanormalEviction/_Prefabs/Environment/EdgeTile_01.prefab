@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7611069631005026894}
   - component: {fileID: 7611069631005026895}
   - component: {fileID: 7611069631005026892}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: TempPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7611069631383798242}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: EdgeTile_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
