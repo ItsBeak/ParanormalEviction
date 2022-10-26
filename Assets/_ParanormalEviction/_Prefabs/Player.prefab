@@ -4816,6 +4816,7 @@ GameObject:
   - component: {fileID: 4094797563134638534}
   - component: {fileID: 4094797563134638532}
   - component: {fileID: 4579158139836115430}
+  - component: {fileID: 8484626150624780444}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -4883,6 +4884,14 @@ CapsuleCollider:
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!81 &8484626150624780444
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094797563134638528}
+  m_Enabled: 1
 --- !u!1001 &8735574338933240655
 PrefabInstance:
   m_ObjectHideFlags: 0
