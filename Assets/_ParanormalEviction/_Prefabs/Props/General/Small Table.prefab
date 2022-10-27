@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3244582512564173385
+--- !u!65 &3152103588909894979
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -42,8 +42,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 104.4303, y: 43.578533, z: 141.16748}
-  m_Center: {x: 0, y: 21.706186, z: 0}
+  m_Size: {x: 1.0443029, y: 0.43578532, z: 1.4116747}
+  m_Center: {x: 0.000000059604645, y: 0.21706186, z: 0.0000010728836}
 --- !u!1001 &7160697995206676367
 PrefabInstance:
   m_ObjectHideFlags: 0
