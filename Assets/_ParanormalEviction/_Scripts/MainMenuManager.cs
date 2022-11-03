@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class MainMenuManager : MonoBehaviour
     public GameObject CreditsCanvas;
     public void Play()
     {
-
+        SceneManager.LoadScene("HUD Test");
     }
 
     public void Credits()
