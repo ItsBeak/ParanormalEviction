@@ -18,7 +18,10 @@ public class RoomManager : MonoBehaviour
     public Room activeRoom;
     public Room[] rooms;
 
+    public Text roomNameReadout;
+
     int nextRoomIndex;
+    int targetTeleportLocationID;
     bool isBusy;
 
     private void Awake()
@@ -33,47 +36,20 @@ public class RoomManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (!isBusy)
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha0))
-            {
-                ChangeRoom(0);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                ChangeRoom(1);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                ChangeRoom(2);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                ChangeRoom(3);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                ChangeRoom(4);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha5))
-            {
-                ChangeRoom(5);
-            }
-            else if (Input.GetKeyDown(KeyCode.Alpha6))
-            {
-                ChangeRoom(6);
-            }
-        }
-
-    }
-
-    public void ChangeRoom(int targetRoomIndex)
+    public void ChangeRoom(Room targetRoom, int teleportID)
     {
         isBusy = true;
         CallFadeOut();
-        nextRoomIndex = targetRoomIndex;
+
+        for (int i = 0; i < rooms.Length; i++)
+        {
+            if (targetRoom == rooms[i])
+            {
+                nextRoomIndex = i;
+                targetTeleportLocationID = teleportID;
+                break;
+            }
+        }
     }
 
     public void CallFadeOut()
@@ -102,10 +78,11 @@ public class RoomManager : MonoBehaviour
     public void CallFadeIn()
     {
         StartCoroutine(FadeIn());
-        activeRoom = rooms[nextRoomIndex];
 
-        //Temporary player teleport
-        player.transform.position = activeRoom.roomCentre.position;
+        activeRoom = rooms[nextRoomIndex];
+        roomNameReadout.text = rooms[nextRoomIndex].roomName;
+
+        player.transform.position = activeRoom.teleportPoints[targetTeleportLocationID].position;
 
     }
 
