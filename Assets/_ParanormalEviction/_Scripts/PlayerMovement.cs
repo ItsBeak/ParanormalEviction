@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed = 3f; //Controls velocity multiplier
     Rigidbody rb; //Tells script there is a rigidbody, we can use variable rb to reference it in further script
+    public bool CanMove;
 
     Vector3 moveDir;
 
@@ -19,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (!CanMove)
+            return;
+
         moveDir.x = Input.GetAxisRaw("Horizontal"); // d key changes value to 1, a key changes value to -1
         moveDir.z = Input.GetAxisRaw("Vertical"); // w key changes value to 1, s key changes value to -1
         moveDir = moveDir.normalized;

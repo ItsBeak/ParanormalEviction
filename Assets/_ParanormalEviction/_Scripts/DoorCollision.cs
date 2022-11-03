@@ -6,10 +6,18 @@ using UnityEngine.UI;
 public class DoorCollision : MonoBehaviour
 {
 
-    private void OnTriggerStay(Collider other)
+    public FloatEditor Test;
+
+    public void Toggle()
     {
-        Debug.Log("An object is still inside of the trigger");
         gameObject.SetActive(!gameObject.activeSelf);
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        
+        Debug.Log("An object is still inside of the trigger");
+        
 
     }
 
@@ -22,6 +30,6 @@ public class DoorCollision : MonoBehaviour
     
     void Update()
     {
-        
+
     }
 }
