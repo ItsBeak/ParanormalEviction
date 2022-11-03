@@ -7,7 +7,7 @@ public class SanityManager : MonoBehaviour
 
     public SanityGauge gauge;
 
-    public float sanityLevel;
+    [HideInInspector] public float sanityLevel;
 
     public float sanityLevelMax = 100f;
 
