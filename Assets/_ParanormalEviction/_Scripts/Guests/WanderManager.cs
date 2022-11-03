@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIManager : MonoBehaviour
+public class WanderManager : MonoBehaviour
 {
-
     public Transform[] rooms;
     Dictionary<Transform, GameObject> PointRequests;
 
@@ -17,13 +16,6 @@ public class AIManager : MonoBehaviour
         }
         PointRequests = new Dictionary<Transform, GameObject>();
     }
-
-    void Update()
-    {
-
-
-    }
-
     public int GetRoom()
     {
         int pickroom = Mathf.FloorToInt(Random.Range(0f, rooms.Length));
