@@ -7,6 +7,7 @@ public class possesable : MonoBehaviour
     [Header("Components")]
     public Animator[] animators;
     public AudioSource[] audioSources;
+    public ParticleSystem[] particleSystems;
 
     [Header("Parameters")]
     public float scariness;

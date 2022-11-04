@@ -42,6 +42,7 @@ public class AIMovement : MonoBehaviour
             if(SanDeath) // temp death check remove once flee state is implemented
             {
                 Tracker.IncreaseWinCount(GetComponent<GameObject>());
+                Destroy(this.gameObject);
             }
             // Wait in place Code for idling
             StayTime += Time.deltaTime;
