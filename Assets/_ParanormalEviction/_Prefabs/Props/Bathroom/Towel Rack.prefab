@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Towel Rack
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 189411fc77cd9bc48b3cc4f5adaa7ced, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 189411fc77cd9bc48b3cc4f5adaa7ced, type: 3}
 --- !u!4 &1877366287087102483 stripped

@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kettle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4c7ca7199ac9bba4dbd61bfba221dad3, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4c7ca7199ac9bba4dbd61bfba221dad3, type: 3}
 --- !u!4 &2644308124612400891 stripped

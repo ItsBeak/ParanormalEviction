@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Whisky_bottle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7ff6ac1e612cf484c9134588ed6945a1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ff6ac1e612cf484c9134588ed6945a1, type: 3}
 --- !u!4 &8934840982137821136 stripped
