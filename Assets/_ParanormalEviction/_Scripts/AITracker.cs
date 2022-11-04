@@ -22,8 +22,10 @@ public class AITracker : MonoBehaviour
     public void IncreaseWinCount(GameObject Guest)
     {
         WinCount++;
-        Destroy(Guest);
-        Instantiate(GuestPrefab, Entrance);
+
+        GameObject newGuest = Instantiate(GuestPrefab, Entrance.position, Quaternion.identity, this.transform);
+
+        Debug.Log("Spwaning new guest!");
         // create new guest as child of the object this script is attached to at the exit
         // or discuss with developers if performing a reset and dumping the guest back in is better.
     }

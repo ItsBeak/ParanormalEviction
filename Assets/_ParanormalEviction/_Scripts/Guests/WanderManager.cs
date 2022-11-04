@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class WanderManager : MonoBehaviour
 {
-    public Transform[] rooms;
+    Transform[] rooms;
     Dictionary<Transform, GameObject> PointRequests;
 
-    void Start()
+    private void Awake()
     {
+        PointRequests = new Dictionary<Transform, GameObject>();
         rooms = new Transform[transform.childCount];
+
         for (int i = 0; i < rooms.Length; i++)
         {
             rooms[i] = transform.GetChild(i);
         }
-        PointRequests = new Dictionary<Transform, GameObject>();
     }
+
     public int GetRoom()
     {
         int pickroom = Mathf.FloorToInt(Random.Range(0f, rooms.Length));

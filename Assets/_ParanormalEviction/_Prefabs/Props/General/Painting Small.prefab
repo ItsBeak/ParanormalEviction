@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5665976497961419191}
   m_Layer: 11
-  m_Name: Painting 01
+  m_Name: Painting Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,6 +89,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f1c8d0fe78dd8874fa105a8fc0dd9d57, type: 3}
       propertyPath: m_Name
       value: Painting_small
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1c8d0fe78dd8874fa105a8fc0dd9d57, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c8d0fe78dd8874fa105a8fc0dd9d57, type: 3}

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &554402207739084290
 Transform:
@@ -85,6 +85,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 85697bb8eeddea64f8008a5e3c99fa2a, type: 3}
       propertyPath: m_Name
       value: SkirtingBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85697bb8eeddea64f8008a5e3c99fa2a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85697bb8eeddea64f8008a5e3c99fa2a, type: 3}

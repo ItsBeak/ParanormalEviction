@@ -17,6 +17,7 @@ public class AIMovement : MonoBehaviour
     UnityEngine.AI.NavMeshAgent agent;
 
     MeshRenderer Rend;
+    public GameObject overheadUI;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +29,7 @@ public class AIMovement : MonoBehaviour
         agent.destination = pointManager.RandPointInRoom(CurrentRoom, gameObject).position;
         sanity = GetComponent<SanityManager>();
         Tracker = GetComponentInParent<AITracker>();
+        Exit = GameObject.Find("_ExitPoint").transform;
     }
 
     // Update is called once per frame
@@ -40,6 +42,7 @@ public class AIMovement : MonoBehaviour
             if(SanDeath) // temp death check remove once flee state is implemented
             {
                 Tracker.IncreaseWinCount(GetComponent<GameObject>());
+                Destroy(this.gameObject);
             }
             // Wait in place Code for idling
             StayTime += Time.deltaTime;
@@ -59,11 +62,13 @@ public class AIMovement : MonoBehaviour
         {
             Rend.enabled = false;
             agent.speed = 1000;
+            overheadUI.SetActive(false);
         }
         else
         {
             Rend.enabled = true;
             agent.speed = Random.Range(3, 7);
+            overheadUI.SetActive(true);
         }
 
         // sends the Guest to a different room after a length of time has passed
