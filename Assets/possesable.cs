@@ -13,11 +13,17 @@ public class possesable : MonoBehaviour
     public float scariness;
     public float scareRadius;
     public LayerMask guestLayer;
-    public float scareCooldown;
+    public float timeRemaining;
+    float timeStore;
 
 
     bool canPossess;
-    bool isOnCooldown;
+    bool cooldown = false;
+
+    public void Start()
+    {
+        timeStore = timeRemaining;
+    }
 
     void Update()
     {
@@ -25,6 +31,20 @@ public class possesable : MonoBehaviour
         {
             Possesion.Instance.Active = this;
             Debug.LogWarning("Setting active object");
+        }
+
+        if (cooldown == true)
+        {
+            if (timeRemaining > 0 && cooldown)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("cooldown expired");
+                cooldown = false;
+                timeRemaining = timeStore;
+            }
         }
     }
 
@@ -46,6 +66,8 @@ public class possesable : MonoBehaviour
 
     public void TriggerScare()
     {
+        cooldown = true;
+
         Debug.Log("Scaring from object: " + gameObject);
 
         Collider[] hitGuests = Physics.OverlapSphere(transform.position, scareRadius, guestLayer);
