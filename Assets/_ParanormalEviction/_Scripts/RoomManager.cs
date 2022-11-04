@@ -38,6 +38,11 @@ public class RoomManager : MonoBehaviour
 
     public void ChangeRoom(Room targetRoom, int teleportID)
     {
+        if (isBusy)
+        {
+            return;
+        }
+
         isBusy = true;
         CallFadeOut();
 
