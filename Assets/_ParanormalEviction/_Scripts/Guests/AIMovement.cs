@@ -12,7 +12,7 @@ public class AIMovement : MonoBehaviour
     public Transform Exit;
     public WanderManager pointManager;
     public AITracker Tracker;
-    private bool SanDeath = false;
+    public bool SanDeath = false;
     SanityManager sanity;
     UnityEngine.AI.NavMeshAgent agent;
 
@@ -21,7 +21,7 @@ public class AIMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Rend = GetComponent<MeshRenderer>();
+        Rend = GetComponentInChildren<MeshRenderer>();
         pointManager = GameObject.Find("WanderMarkers").GetComponent<WanderManager>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         priority = agent.avoidancePriority;
@@ -35,15 +35,19 @@ public class AIMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckSan();
+
+        if (SanDeath) // temp death check remove once flee state is implemented
+        {
+
+
+        }
+
         //wander code
         roomTimer += Time.deltaTime;
-        if (!agent.hasPath)
+        if (!agent.hasPath && !SanDeath)
         {
-            if(SanDeath) // temp death check remove once flee state is implemented
-            {
-                Tracker.IncreaseWinCount(GetComponent<GameObject>());
-                Destroy(this.gameObject);
-            }
+
             // Wait in place Code for idling
             StayTime += Time.deltaTime;
             agent.avoidancePriority -= 1;
@@ -58,21 +62,22 @@ public class AIMovement : MonoBehaviour
         }
         // Movement between rooms code. warning the sanity guage is still visible when transitioning between rooms and there are issues with stopping between frames causing
         // the guests to rocket into rooms.
-        if(agent.isOnOffMeshLink)
+
+        if (agent.isOnOffMeshLink)
         {
-            Rend.enabled = false;
-            agent.speed = 1000;
-            overheadUI.SetActive(false);
-        }
-        else
-        {
-            Rend.enabled = true;
+            agent.CompleteOffMeshLink();
+            if(!SanDeath)
             agent.speed = Random.Range(3, 7);
-            overheadUI.SetActive(true);
+        }
+
+        if (SanDeath && Vector3.Distance(agent.transform.position, Exit.position) <= 2)
+        {
+            Tracker.IncreaseWinCount(GetComponent<GameObject>());
+            Destroy(this.gameObject);
         }
 
         // sends the Guest to a different room after a length of time has passed
-        if (roomTimer >= timeInRoom)
+        if (roomTimer >= timeInRoom && !SanDeath)
         {
             CurrentRoom = pointManager.GetRoom();
             roomTimer = 0;
@@ -85,11 +90,10 @@ public class AIMovement : MonoBehaviour
     /// </summary>
     public void CheckSan()
     {
-        if (sanity.sanityLevel == 0)
+        if (sanity.sanityLevel <= 0)
         {
             // flee state code
-            agent.ResetPath();
-            agent.speed = 18;
+            agent.speed = 14;
             agent.angularSpeed = 220;
             agent.SetDestination(Exit.position);
             SanDeath = true; // when the state machine is done remove this and simply have it's functions be carried out upon leaving the flee state.
