@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Image timerFill;
     public Transform timerHand;
     public Text guestDisplay;
+    public AITracker tracker;
 
     [Header("Timer")]
     public float gameTimeMax;
@@ -37,7 +38,7 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        guestDisplay.text = guestsScared + "/" + guestTarget.ToString();
+        guestDisplay.text = tracker.WinCount + "/" + guestTarget.ToString();
         timerFill.fillAmount = (timer / 4) / gameTimeMax;
 
         timerHand.rotation = Quaternion.Euler(0, 0, ((timer / gameTimeMax) * 90 * -1) + 90);
@@ -46,11 +47,11 @@ public class GameManager : MonoBehaviour
 
         if (guestsScared >= guestTarget)
         {
-            SceneManager.LoadScene("WinScene");
+            //SceneManager.LoadScene("WinScene");
         }
         else if (timer < 0)
         {
-            SceneManager.LoadScene("LoseScene");
+           // SceneManager.LoadScene("LoseScene");
         }
 
     }

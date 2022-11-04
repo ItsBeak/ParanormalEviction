@@ -6,9 +6,9 @@ public class SanityManager : MonoBehaviour
 {
 
     public SanityGauge gauge;
-    public AIMovement Guest;
+    [HideInInspector] public AIMovement Guest;
 
-    [HideInInspector] public float sanityLevel;
+    public float sanityLevel;
 
     public float sanityLevelMax = 100f;
 
