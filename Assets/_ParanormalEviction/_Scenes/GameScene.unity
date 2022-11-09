@@ -4659,7 +4659,7 @@ MonoBehaviour:
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  scareCooldown: 5
+  timeRemaining: 0
 --- !u!65 &848632100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6716,7 +6716,7 @@ MonoBehaviour:
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  scareCooldown: 5
+  timeRemaining: 0
 --- !u!65 &1162003218
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6894,7 +6894,7 @@ MonoBehaviour:
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  scareCooldown: 5
+  timeRemaining: 0
 --- !u!65 &1221335191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7690,7 +7690,7 @@ MonoBehaviour:
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  scareCooldown: 5
+  timeRemaining: 0
 --- !u!65 &1421195412
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7945,12 +7945,12 @@ MonoBehaviour:
   animators: []
   audioSources: []
   particleSystems: []
-  scariness: 100
+  scariness: 30
   scareRadius: 3
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  scareCooldown: 5
+  timeRemaining: 0
 --- !u!65 &1472220066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8922,7 +8922,7 @@ MonoBehaviour:
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  scareCooldown: 5
+  timeRemaining: 0
 --- !u!65 &1616378079
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12594,7 +12594,7 @@ MonoBehaviour:
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  scareCooldown: 5
+  timeRemaining: 0
 --- !u!65 &2131330160
 BoxCollider:
   m_ObjectHideFlags: 0
