@@ -47,11 +47,11 @@ public class GameManager : MonoBehaviour
 
         if (guestsScared >= guestTarget)
         {
-            //SceneManager.LoadScene("WinScene");
+            SceneManager.LoadScene("WinScene");
         }
         else if (timer < 0)
         {
-           // SceneManager.LoadScene("LoseScene");
+            SceneManager.LoadScene("LoseScene");
         }
 
     }

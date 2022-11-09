@@ -7,9 +7,7 @@ public class Possesion : MonoBehaviour
     public possesable Active;
     public GameObject mesh;
     PlayerMovement movement;
-    public static Possesion Instance { get; private set;}
-    public float timeRemaining = 10;
-    public bool cooldown = false;
+    public static Possesion Instance { get; private set;}    
 
     public void Start()
     {
@@ -30,10 +28,10 @@ public class Possesion : MonoBehaviour
                 Active = null;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && cooldown == false)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Active.TriggerScare();
-                cooldown = true;
+                
 
             }
 
@@ -42,20 +40,6 @@ public class Possesion : MonoBehaviour
         {
             mesh.SetActive(true);
             movement.CanMove = true;
-        }
-
-        if (cooldown == true)
-        {
-            if (timeRemaining > 0 && cooldown)
-            {
-                timeRemaining -= Time.deltaTime;
-            }
-            else
-            {
-                Debug.Log("cooldown expired");
-                cooldown = false;
-                timeRemaining = 10;
-            }
         }
 
     }
