@@ -32,7 +32,8 @@ public class PlayerMovement : MonoBehaviour
         moveDir.z = Input.GetAxisRaw("Vertical"); // w key changes value to 1, s key changes value to -1
         moveDir = moveDir.normalized;
 
-        rb.velocity = (moveDir.x * Camera.main.transform.right + moveDir.z * Camera.main.transform.forward) * speed;// Creates velocity in direction of value equal to keypress (WASD).
+        if (Camera.main)
+            rb.velocity = (moveDir.x * Camera.main.transform.right + moveDir.z * Camera.main.transform.forward) * speed;// Creates velocity in direction of value equal to keypress (WASD).
 
         if (rb.velocity != Vector3.zero)
             characterModel.rotation = Quaternion.LookRotation(rb.velocity);
