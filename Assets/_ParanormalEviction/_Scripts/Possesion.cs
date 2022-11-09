@@ -23,8 +23,11 @@ public class Possesion : MonoBehaviour
             mesh.SetActive(false);
             movement.CanMove = false;
 
+            Active.interactionDisplay.text = "Press Space to Scare";
+
             if (Input.GetKeyDown(KeyCode.Q))
             {
+                Active.interactionDisplay.text = "";
                 Active = null;
             }
 

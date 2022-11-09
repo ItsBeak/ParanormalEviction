@@ -10,7 +10,7 @@ public class MainMenuManager : MonoBehaviour
     public GameObject CreditsCanvas;
     public void Play()
     {
-        SceneManager.LoadScene("GameLevel");
+        SceneManager.LoadScene("GameScene");
     }
 
     public void Credits()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class possesable : MonoBehaviour
 {
@@ -8,21 +9,24 @@ public class possesable : MonoBehaviour
     public Animator[] animators;
     public AudioSource[] audioSources;
     public ParticleSystem[] particleSystems;
+    public Text interactionDisplay;
 
     [Header("Parameters")]
     public float scariness;
     public float scareRadius;
     public LayerMask guestLayer;
-    public float timeRemaining;
-    float timeStore;
+    float timer;
+    public float cooldownTime;
 
+    public Image cooldownIndicator;
 
     bool canPossess;
-    bool cooldown = false;
+    bool cooldown;
 
     public void Start()
     {
-        timeStore = timeRemaining;
+        timer = 0;
+        interactionDisplay = GameObject.Find("DoorReadout").GetComponent<Text>();
     }
 
     void Update()
@@ -33,19 +37,13 @@ public class possesable : MonoBehaviour
             Debug.LogWarning("Setting active object");
         }
 
-        if (cooldown == true)
-        {
-            if (timeRemaining > 0 && cooldown)
-            {
-                timeRemaining -= Time.deltaTime;
-            }
-            else
-            {
-                Debug.Log("cooldown expired");
-                cooldown = false;
-                timeRemaining = timeStore;
-            }
-        }
+        timer -= Time.deltaTime;
+
+        cooldown = timer > 0;
+
+        cooldownIndicator.enabled = timer > 0;
+        cooldownIndicator.fillAmount = (timer / cooldownTime);
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -53,6 +51,7 @@ public class possesable : MonoBehaviour
         if (other.gameObject.tag == "Player" && Possesion.Instance.Active == null)
         {
             canPossess = true;
+            interactionDisplay.text = "Press E to Possess";
         }
     }
 
@@ -61,14 +60,43 @@ public class possesable : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             canPossess = false;
+            interactionDisplay.text = "";
         }
     }
 
     public void TriggerScare()
     {
-        cooldown = true;
+
+        if (cooldown)
+            return;
+
+        timer = cooldownTime;
 
         Debug.Log("Scaring from object: " + gameObject);
+
+        if (animators.Length != 0)
+        {
+            foreach (Animator anim in animators)
+            {
+                anim.SetTrigger("Scare");
+            }
+        }
+
+        if (audioSources.Length != 0)
+        {
+            foreach (AudioSource source in audioSources)
+            {
+                source.Play();
+            }
+        }
+
+        if (particleSystems.Length != 0)
+        {
+            foreach (ParticleSystem particles in particleSystems)
+            {
+                particles.Play();
+            }
+        }
 
         Collider[] hitGuests = Physics.OverlapSphere(transform.position, scareRadius, guestLayer);
 

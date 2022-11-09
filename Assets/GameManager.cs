@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
 
     [Header("Guests")]
     public int guestTarget;
-    [HideInInspector]public int guestsScared;
 
     private void Awake()
     {
@@ -45,7 +44,7 @@ public class GameManager : MonoBehaviour
 
         timer -= 1 * Time.deltaTime;
 
-        if (guestsScared >= guestTarget)
+        if (tracker.WinCount >= guestTarget)
         {
             SceneManager.LoadScene("WinScene");
         }

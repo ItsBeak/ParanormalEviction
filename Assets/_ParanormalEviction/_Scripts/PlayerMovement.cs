@@ -21,7 +21,12 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         if (!CanMove)
+        {
+            moveDir.x = 0;
+            moveDir.y = 0;
+            rb.velocity = Vector3.zero;
             return;
+        }   
 
         moveDir.x = Input.GetAxisRaw("Horizontal"); // d key changes value to 1, a key changes value to -1
         moveDir.z = Input.GetAxisRaw("Vertical"); // w key changes value to 1, s key changes value to -1
