@@ -11,7 +11,7 @@ public class Doorway : MonoBehaviour
     public Room targetRoom;
     public int locationID;
 
-    bool contact;
+    public bool contact = false;
     BoxCollider trigger;
 
     [Header("Temporary Variables")]
@@ -24,11 +24,13 @@ public class Doorway : MonoBehaviour
     void Start()
     {
         rend.material = contactFalse;
+        doorReadout.text = "";
         doorReadout = GameObject.Find("DoorReadout").GetComponent<Text>();
     }
 
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.E) && contact)
         {
             RoomManager.Instance.ChangeRoom(targetRoom, locationID);
