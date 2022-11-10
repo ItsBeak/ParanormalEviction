@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         if (Camera.main)
             rb.velocity = (moveDir.x * Camera.main.transform.right + moveDir.z * Camera.main.transform.forward) * speed;// Creates velocity in direction of value equal to keypress (WASD).
 
-        if (rb.velocity != Vector3.zero)
+        if (rb.velocity != Vector3.zero && Time.timeScale != 0)
             characterModel.rotation = Quaternion.LookRotation(rb.velocity);
 
     }
