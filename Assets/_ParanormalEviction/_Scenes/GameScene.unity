@@ -427,6 +427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1068095356}
   locationID: 1
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 49091968}
@@ -3360,6 +3361,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 131207624}
   locationID: 1
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 611544960}
@@ -3736,6 +3738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1068095356}
   locationID: 0
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 725740185}
@@ -4405,6 +4408,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1485869255}
   locationID: 0
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 805514039}
@@ -4614,6 +4618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 594878123}
   locationID: 2
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 828100651}
@@ -6258,6 +6263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1681409263}
   locationID: 1
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1036635219}
@@ -7635,6 +7641,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1681409263}
   locationID: 0
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1360515022}
@@ -7953,6 +7960,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1663579220}
   locationID: 0
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1443955729}
@@ -8533,6 +8541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 594878123}
   locationID: 0
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1578225580}
@@ -9485,6 +9494,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6617335594508818011, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617335594807243955, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617335594807243955, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617335595043437102, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617335595073470898, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617335595073470898, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6617335595073470898, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
 --- !u!114 &1690307384 stripped
@@ -9777,6 +9814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1485869255}
   locationID: 1
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1734867702}
@@ -10054,6 +10092,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 131207624}
   locationID: 0
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1786550308}
@@ -10697,6 +10736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 594878123}
   locationID: 1
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1844383238}
@@ -11034,6 +11074,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 2101554181}
   locationID: 0
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1885831092}
@@ -11148,6 +11189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetRoom: {fileID: 1681409263}
   locationID: 2
+  contact: 0
   contactTrue: {fileID: 2100000, guid: 6f9884f89c7390a4b9b22456b6f27347, type: 2}
   contactFalse: {fileID: 2100000, guid: 261008abaf74f154ebd16c60619d5497, type: 2}
   rend: {fileID: 1893029133}
