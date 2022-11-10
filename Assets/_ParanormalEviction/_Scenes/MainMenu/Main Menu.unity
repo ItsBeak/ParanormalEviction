@@ -250,6 +250,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainMenu UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1364422801075503365, guid: fea83e3d0d78bea4887c09a5f6de03de, type: 3}
+      propertyPath: TutorialCanvas
+      value: 
+      objectReference: {fileID: 667261941}
+    - target: {fileID: 2688979147708240601, guid: fea83e3d0d78bea4887c09a5f6de03de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8660340575522498913, guid: fea83e3d0d78bea4887c09a5f6de03de, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -294,8 +302,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8998696286729950542, guid: fea83e3d0d78bea4887c09a5f6de03de, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fea83e3d0d78bea4887c09a5f6de03de, type: 3}
+--- !u!1 &667261941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2688979147708240601, guid: fea83e3d0d78bea4887c09a5f6de03de, type: 3}
+  m_PrefabInstance: {fileID: 654969770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1680340165
 GameObject:
   m_ObjectHideFlags: 0

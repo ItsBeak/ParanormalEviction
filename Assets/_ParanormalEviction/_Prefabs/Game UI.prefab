@@ -592,14 +592,13 @@ GameObject:
   - component: {fileID: 6617335594508818006}
   - component: {fileID: 6617335594508818009}
   - component: {fileID: 6617335594508818008}
-  - component: {fileID: 6617335594508818004}
   m_Layer: 5
   m_Name: Pause Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6617335594508818007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -686,22 +685,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6617335594508818004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6617335594508818011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b4d1e17ebc634449340a2553dcf710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 6617335594508818011}
-  HUDCanvas: {fileID: 6617335595043437102}
-  Master: {fileID: 24100000, guid: 815f0541282d0d2448c2ac6b9a18b9f3, type: 2}
-  VolumeSlider: {fileID: 6617335595182338047}
 --- !u!1 &6617335594517491464
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +805,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6617335594508818004}
+      - m_Target: {fileID: 6617335595043437099}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ReturnToMain
         m_Mode: 1
@@ -1099,7 +1082,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1369,7 +1352,7 @@ MonoBehaviour:
   PauseCanvas: {fileID: 6617335594508818011}
   HUDCanvas: {fileID: 6617335595043437102}
   Master: {fileID: 24100000, guid: 815f0541282d0d2448c2ac6b9a18b9f3, type: 2}
-  VolumeSlider: {fileID: 0}
+  VolumeSlider: {fileID: 6617335595182338047}
 --- !u!1 &6617335595073470901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1402,8 +1385,8 @@ RectTransform:
   m_Father: {fileID: 6617335594976566719}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 60, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1455,7 +1438,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6617335595182338046}
   - component: {fileID: 6617335595182338047}
-  - component: {fileID: 8518697213227815534}
   m_Layer: 5
   m_Name: Volume Slider
   m_TagString: Untagged
@@ -1536,7 +1518,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8518697213227815534}
+      - m_Target: {fileID: 6617335595043437099}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: AudioVolume
         m_Mode: 1
@@ -1548,22 +1530,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8518697213227815534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6617335595182337985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b4d1e17ebc634449340a2553dcf710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseCanvas: {fileID: 0}
-  HUDCanvas: {fileID: 0}
-  Master: {fileID: 0}
-  VolumeSlider: {fileID: 6617335595182338047}
 --- !u!1 &6617335595465342073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1729,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6617335594508818004}
+      - m_Target: {fileID: 6617335595043437099}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: resume
         m_Mode: 1
