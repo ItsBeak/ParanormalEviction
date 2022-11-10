@@ -7,6 +7,7 @@ public class BillboardUI : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(Camera.main.transform.position);
+        if (Camera.main != null)
+            transform.LookAt(Camera.main.transform.position);
     }
 }

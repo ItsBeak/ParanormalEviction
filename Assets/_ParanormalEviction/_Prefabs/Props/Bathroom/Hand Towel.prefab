@@ -98,6 +98,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hand Towel
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 21a94c257ed53214a9cf2a79e40a2418, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21a94c257ed53214a9cf2a79e40a2418, type: 3}
 --- !u!4 &2462101848221496128 stripped

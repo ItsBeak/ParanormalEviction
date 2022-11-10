@@ -6,8 +6,9 @@ public class SanityManager : MonoBehaviour
 {
 
     public SanityGauge gauge;
+    [HideInInspector] public AIMovement Guest;
 
-    [HideInInspector] public float sanityLevel;
+    public float sanityLevel;
 
     public float sanityLevelMax = 100f;
 
@@ -15,6 +16,7 @@ public class SanityManager : MonoBehaviour
     private void Start()
     {
         sanityLevel = sanityLevelMax;
+        Guest = GetComponent<AIMovement>();
     }
 
     private void Update()
@@ -47,6 +49,8 @@ public class SanityManager : MonoBehaviour
         sanityLevel -= amount;
 
         gauge.SetFillAmount(sanityLevel);
+
+        Guest.CheckSan();
 
         // LOCHLAN - CALL CHECK STATE FUNCTION ON GUEST
         
