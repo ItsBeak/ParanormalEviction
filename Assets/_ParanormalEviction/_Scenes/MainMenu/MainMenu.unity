@@ -1841,7 +1841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -70.229614, y: 62.837036}
+  m_AnchoredPosition: {x: -70.22974, y: 62.837036}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373947685
@@ -1954,7 +1954,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Programmers
 
-    Claire Steele
+    Claire Steel
 
     Lochlan Robichaud'
 --- !u!222 &1615095139
@@ -1993,7 +1993,7 @@ RectTransform:
   m_GameObject: {fileID: 1929124451}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3512816, y: 3.3512816, z: 3.3512816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 591751789}
   m_Father: {fileID: 873077978}
@@ -2002,7 +2002,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 321.99994, y: 136}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 560, y: 105}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1929124453
 MonoBehaviour:
