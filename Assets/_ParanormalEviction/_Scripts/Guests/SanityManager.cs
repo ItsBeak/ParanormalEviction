@@ -45,15 +45,16 @@ public class SanityManager : MonoBehaviour
 
     public void Scare(float amount)
     {
+        if (Guest.Scareable == true)
+        {
+            if (Guest.Idle)
+                sanityLevel -= amount;
+            sanityLevel -= amount;
 
-        sanityLevel -= amount;
+            gauge.SetFillAmount(sanityLevel);
 
-        gauge.SetFillAmount(sanityLevel);
-
-        Guest.CheckSan();
-
-        // LOCHLAN - CALL CHECK STATE FUNCTION ON GUEST
-        
+            Guest.CheckSan();
+        }
     }
 
     public void Calm(float amount)
