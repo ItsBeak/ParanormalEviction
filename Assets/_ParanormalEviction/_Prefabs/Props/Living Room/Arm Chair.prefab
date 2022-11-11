@@ -82,6 +82,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7540415153994141087, guid: 30126fdc11e785848a6b8fdf72c8fc02, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2900bf2413778b14c8aaaa327a0c9a24, type: 2}
+    - target: {fileID: -4179917761546683536, guid: 30126fdc11e785848a6b8fdf72c8fc02, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc81d5b1bf4a76f4c80a9130bbc3b137, type: 2}
+    - target: {fileID: -2221736893687744681, guid: 30126fdc11e785848a6b8fdf72c8fc02, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc81d5b1bf4a76f4c80a9130bbc3b137, type: 2}
     - target: {fileID: 919132149155446097, guid: 30126fdc11e785848a6b8fdf72c8fc02, type: 3}
       propertyPath: m_Name
       value: Arm_Chair

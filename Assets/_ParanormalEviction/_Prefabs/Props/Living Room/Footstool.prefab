@@ -122,18 +122,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Footstool
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 59659406612bf40418904998a00a1716, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1120705170318893804, guid: 59659406612bf40418904998a00a1716, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032660858638407299, guid: 59659406612bf40418904998a00a1716, type: 3}
-      propertyPath: m_Layer
-      value: 11
-      objectReference: {fileID: 0}
+    - target: {fileID: 7483894711331120201, guid: 59659406612bf40418904998a00a1716, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc81d5b1bf4a76f4c80a9130bbc3b137, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59659406612bf40418904998a00a1716, type: 3}
 --- !u!4 &2495086368323494878 stripped

@@ -82,10 +82,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4236072144289660696, guid: f6b88ddace165da4dbb71388b945ba5a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: feb9501105955874f844850ff6a86542, type: 2}
     - target: {fileID: 919132149155446097, guid: f6b88ddace165da4dbb71388b945ba5a, type: 3}
       propertyPath: m_Name
       value: prop_microwave_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3996944989565322162, guid: f6b88ddace165da4dbb71388b945ba5a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: feb9501105955874f844850ff6a86542, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6b88ddace165da4dbb71388b945ba5a, type: 3}
 --- !u!4 &8685875432262625263 stripped
