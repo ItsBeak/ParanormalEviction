@@ -50,7 +50,7 @@ public class Possesable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canPossess)
+        if (Input.GetKeyDown(KeyCode.Q) && canPossess)
         {
             Possesion.Instance.Active = this;
             Debug.LogWarning("Setting active object");
