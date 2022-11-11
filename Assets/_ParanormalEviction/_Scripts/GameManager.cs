@@ -37,10 +37,10 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        guestDisplay.text = (guestTarget - tracker.WinCount) + "/" + guestTarget.ToString();
-        timerFill.fillAmount = (timer / 4) / gameTimeMax;
+        guestDisplay.text = (guestTarget - tracker.WinCount).ToString(); // + "/" + guestTarget.ToString()
+        timerFill.fillAmount = timer / gameTimeMax;
 
-        timerHand.rotation = Quaternion.Euler(0, 0, ((timer / gameTimeMax) * 90) + 180);
+        timerHand.rotation = Quaternion.Euler(0, 0, ((timer / gameTimeMax) * 90) - 90);
 
         timer -= 1 * Time.deltaTime;
 

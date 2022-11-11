@@ -17,7 +17,7 @@ public class Possesion : MonoBehaviour
     }
 
     
-    public void Update()
+    public void LateUpdate()
     {
 
         if (Active)
@@ -31,7 +31,7 @@ public class Possesion : MonoBehaviour
             {
                 if (Possesing == true)
                 {
-                    Active.interactionDisplay.text = "";
+                    Active.interactionDisplay.text = "Press Q to Possess";
                     Active = null;
                     Possesing = false;
                     Debug.LogWarning("2nd");
