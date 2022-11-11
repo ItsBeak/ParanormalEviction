@@ -7,11 +7,13 @@ public class Possesion : MonoBehaviour
     public Possesable Active;
     public GameObject mesh;
     PlayerMovement movement;
+    bool Possesing;
     public static Possesion Instance { get; private set;}    
 
     public void Start()
     {
         movement = GetComponent<PlayerMovement>();
+        Possesing = false;
     }
 
     
@@ -27,9 +29,21 @@ public class Possesion : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Q))
             {
-                Active.interactionDisplay.text = "";
-                Active = null;
+                if (Possesing == true)
+                {
+                    Active.interactionDisplay.text = "";
+                    Active = null;
+                    Possesing = false;
+                    Debug.LogWarning("2nd");
+                }
+
+                else
+                {
+                    Debug.LogWarning("1st");
+                    Possesing = true;
+                }
             }
+            
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
