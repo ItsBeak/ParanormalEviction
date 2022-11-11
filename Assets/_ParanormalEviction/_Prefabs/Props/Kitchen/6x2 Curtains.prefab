@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 470618205792539333}
   m_Layer: 0
-  m_Name: 8x2 Curtains
+  m_Name: 6x2 Curtains
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,15 +44,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d396ab7e775773040a225f7c2fa4902a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.290257
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d396ab7e775773040a225f7c2fa4902a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0631806
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d396ab7e775773040a225f7c2fa4902a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6601117
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d396ab7e775773040a225f7c2fa4902a, type: 3}
       propertyPath: m_LocalRotation.w
