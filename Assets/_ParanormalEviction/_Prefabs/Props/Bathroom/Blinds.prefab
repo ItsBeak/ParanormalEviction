@@ -94,6 +94,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cb729023bba4164478f779c68be117f4, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c40a4756c2537eb4098d9da906b82d77, type: 2}
+    - target: {fileID: -7511558181221131132, guid: cb729023bba4164478f779c68be117f4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: c2e622c16d9072443b3199366422cce7, type: 2}
     - target: {fileID: 919132149155446097, guid: cb729023bba4164478f779c68be117f4, type: 3}
       propertyPath: m_Name
       value: Blinds

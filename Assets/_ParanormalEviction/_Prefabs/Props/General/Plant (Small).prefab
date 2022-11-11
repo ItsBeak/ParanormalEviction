@@ -97,7 +97,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6a7ffb3cd336d32429c77a95e49b1634, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bc81d5b1bf4a76f4c80a9130bbc3b137, type: 2}
+      objectReference: {fileID: 2100000, guid: 389d0ab1ede545c49a7a744511f876b7, type: 2}
     - target: {fileID: 919132149155446097, guid: 6a7ffb3cd336d32429c77a95e49b1634, type: 3}
       propertyPath: m_Name
       value: Plant_Small

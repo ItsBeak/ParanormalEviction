@@ -82,10 +82,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -698540532550423575, guid: c5421e8457263564da3e1ab893c6d604, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2900bf2413778b14c8aaaa327a0c9a24, type: 2}
     - target: {fileID: 919132149155446097, guid: c5421e8457263564da3e1ab893c6d604, type: 3}
       propertyPath: m_Name
       value: Double_Bed (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7239177940356296027, guid: c5421e8457263564da3e1ab893c6d604, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: bc81d5b1bf4a76f4c80a9130bbc3b137, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5421e8457263564da3e1ab893c6d604, type: 3}
 --- !u!4 &2157645451706567150 stripped
