@@ -8,19 +8,45 @@ public class AIMovement : MonoBehaviour
     int priority;
     private float roomTimer = 0;
     public float timeInRoom = 45;
-    float StayTime = 0;
+    public float IdleRunTimer = 0;
+    public float IdleRunTimerMax = 0;
     public Transform Exit;
     public WanderManager pointManager;
     public AITracker Tracker;
-    public bool SanDeath = false;
-    public bool Scareable = true;
+    public bool Scared = false;
+    public bool Scareable;
     public bool Idle = false;
-    SanityManager sanity;
+    public SanityManager sanity;
     UnityEngine.AI.NavMeshAgent agent;
+    FSM fsm = new FSM();
+
 
     MeshRenderer Rend;
     public GameObject overheadUI;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        State Wander = new WanderState();
+        State Idle = new IdleState();
+        State Run = new RunState();
+        State Flee = new FleeState();
+
+        Transition WToI = new WanderToIdleTrans(Idle);
+        Transition WToR = new WanderToRunTrans(Run);
+        Transition WToF = new WanderToFleeTrans(Flee);
+        Transition IToW = new IdleToWanderTrans(Wander);
+        Transition IToR = new IdleToRunTrans(Run);
+        Transition IToF = new IdleToFleeTrans(Flee);
+        Transition RToW = new RunToWanderTrans(Wander);
+
+        fsm.AddTransition(Wander, WToI);
+        fsm.AddTransition(Wander, WToR);
+        fsm.AddTransition(Wander, WToF);
+        fsm.AddTransition(Idle, IToW);
+        fsm.AddTransition(Idle, IToR);
+        fsm.AddTransition(Idle, )
+        fsm.SetCurrentState(Wander, this);
+    }
     void Start()
     {
         Rend = GetComponentInChildren<MeshRenderer>();
@@ -32,41 +58,28 @@ public class AIMovement : MonoBehaviour
         sanity = GetComponent<SanityManager>();
         Tracker = GetComponentInParent<AITracker>();
         Exit = GameObject.Find("_ExitPoint").transform;
+        Scareable = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckSan();
-
         //wander code
         roomTimer += Time.deltaTime;
         if (!agent.hasPath && !SanDeath)// temp death check remove once flee state is implemented
         {
+            
 
-            // Wait in place Code for idling
-            IdleState();
-            if (StayTime > 3)
-            {
-                WanderState();
-            }
-            //
         }
-        // Movement between rooms code. warning the sanity guage is still visible when transitioning between rooms and there are issues with stopping between frames causing
-        // the guests to rocket into rooms.
 
+        // Movement between rooms code.
         if (agent.isOnOffMeshLink)
         {
             agent.CompleteOffMeshLink();
-            if(!SanDeath)
-            agent.speed = Random.Range(3, 7);
+            if (!SanDeath)
+                agent.speed = Random.Range(3, 7);
         }
 
-        if (SanDeath && Vector3.Distance(agent.transform.position, Exit.position) <= 2)
-        {
-            Tracker.IncreaseWinCount(GetComponent<GameObject>());
-            Destroy(this.gameObject);
-        }
 
         // sends the Guest to a different room after a length of time has passed
         if (roomTimer >= timeInRoom && !SanDeath)
@@ -82,6 +95,7 @@ public class AIMovement : MonoBehaviour
     /// </summary>
     public void CheckSan()
     {
+        Scared = true;
         if (sanity.sanityLevel <= 0 || sanity.sanityLevel < 10 && Idle == true)
         {
             // flee state code
@@ -96,37 +110,46 @@ public class AIMovement : MonoBehaviour
 
     public void FleeState()
     {
-            Scareable = false;
-            agent.speed = 14;
-            agent.angularSpeed = 360;
-            agent.SetDestination(Exit.position);
-            SanDeath = true; // when the state machine is done remove this and simply have it's functions be carried out upon leaving the flee state.
+        Scareable = false;
+        agent.speed = 14;
+        agent.angularSpeed = 360;
+        agent.SetDestination(Exit.position);
+        SanDeath = true; // when the state machine is done remove this and simply have it's functions be carried out upon leaving the flee state.
     }
 
     public void RunState()
     {
+        Idle = false;
         agent.speed += 5;
         agent.angularSpeed = 240;
         Scareable = false;
-        pointManager.GetRoom();
+        CurrentRoom = pointManager.GetRoom();
+        agent.destination = pointManager.RandPointInRoom(CurrentRoom, gameObject).position;
 
     }
 
     public void WanderState()
     {
         Scareable = true;
+        Idle = false;
         agent.speed = Random.Range(3, 7);
         agent.angularSpeed = 120;
         agent.destination = pointManager.RandPointInRoom(CurrentRoom, gameObject).position;
         agent.avoidancePriority += 1;
         StayTime = 0;
-        Idle = false;
+
     }
 
     public void IdleState()
     {
+        if (!Idle)
+        {
+            Idle = true;
+            agent.avoidancePriority -= 1;
+        }
         StayTime += Time.deltaTime;
-        agent.avoidancePriority -= 1;
-        Idle = true;
+
     }
+
+
 }
