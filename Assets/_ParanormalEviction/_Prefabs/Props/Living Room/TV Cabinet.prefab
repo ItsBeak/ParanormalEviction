@@ -102,6 +102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TV cabinet
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2f886ebd0b2f12a4699cb0ce59075711, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f886ebd0b2f12a4699cb0ce59075711, type: 3}
 --- !u!4 &8576767775164304367 stripped

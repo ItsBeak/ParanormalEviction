@@ -94,6 +94,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: prop_fireplace_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6292d5513deaf1442802ef81c2ed74a2, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea0141fc9a0a2c443a656f53eeb38c28, type: 3}
 --- !u!4 &5235616845255243416 stripped

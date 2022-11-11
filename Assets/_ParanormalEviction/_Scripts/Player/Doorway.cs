@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+using TMPro;
 
 public class Doorway : MonoBehaviour
 {
@@ -8,20 +11,26 @@ public class Doorway : MonoBehaviour
     public Room targetRoom;
     public int locationID;
 
-    bool contact;
+    public bool contact = false;
     BoxCollider trigger;
 
     [Header("Temporary Variables")]
     public Material contactTrue;
     public Material contactFalse;
     public MeshRenderer rend;
+
+    public Text doorReadout;
+
     void Start()
     {
         rend.material = contactFalse;
+        doorReadout.text = "";
+        doorReadout = GameObject.Find("DoorReadout").GetComponent<Text>();
     }
 
     void Update()
     {
+        
         if (Input.GetKeyDown(KeyCode.E) && contact)
         {
             RoomManager.Instance.ChangeRoom(targetRoom, locationID);
@@ -34,6 +43,7 @@ public class Doorway : MonoBehaviour
         {
             contact = true;
             rend.material = contactTrue;
+            doorReadout.text = "Press E to Enter Door";
         }
     }
 
@@ -43,6 +53,7 @@ public class Doorway : MonoBehaviour
         {
             contact = false;
             rend.material = contactFalse;
+            doorReadout.text = "";
         }
     }
 

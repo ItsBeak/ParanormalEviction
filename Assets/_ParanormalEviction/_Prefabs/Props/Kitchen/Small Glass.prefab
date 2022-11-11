@@ -90,6 +90,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_glass 1
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 185f52070f4768d4289e32c499e18135, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e1b6510e038bc3e488df0d56e1e19215, type: 3}
 --- !u!4 &6878740322026080214 stripped

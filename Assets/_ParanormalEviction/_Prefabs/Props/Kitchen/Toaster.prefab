@@ -90,6 +90,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toaster
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 85b4495132cdd4b42a9ed22ca86a5af6, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d014b4ff4f06094e9dcee5ed40c257f, type: 3}
 --- !u!4 &4840851405893594280 stripped
