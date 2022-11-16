@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1884578517298581243}
   - component: {fileID: 8861800564221726881}
   - component: {fileID: 706214357610383705}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: CooldownIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 5231577718682288062}
   - component: {fileID: 166954867188547028}
   - component: {fileID: 5754042360832524858}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Possessable Overhead UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &166954867188547028
 MonoBehaviour:
   m_ObjectHideFlags: 0
