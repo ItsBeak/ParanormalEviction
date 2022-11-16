@@ -78,16 +78,19 @@ public class AIMovement : MonoBehaviour
         // Executes the current state then checks for valid transitions if one is found next state = transission state
         // then exit current state enter next state current state = next state
         fsm.UpdateState(this);
-        
+
         // Movement between rooms code.
         if (agent.isOnOffMeshLink)
         {
             //Rend.enabled = false; This solution failed.
             agent.CompleteOffMeshLink();
-            //Rend.enabled = true;
-            agent.speed = Random.Range(MinSpeed, MaxSpeed);
         }
-
+        // For some reason the code above and below breaks down when I add it into a state
+        if (roomTimer >= timeInRoom)
+        {
+            CurrentRoom = pointManager.GetRoom();
+            roomTimer = 0;
+        }
 
     }
 

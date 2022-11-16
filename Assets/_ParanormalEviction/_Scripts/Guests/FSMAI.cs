@@ -95,13 +95,10 @@ public class WanderState : State
 
         }
 
+
         // sends the Guest to a different room after a length of time has passed
         Agent.roomTimer += Time.deltaTime;
-        if (Agent.roomTimer >= Agent.timeInRoom)
-        {
-            Agent.CurrentRoom = Agent.pointManager.GetRoom();
-            Agent.roomTimer = 0;
-        }
+
     }
     public override void Exit(AIMovement Agent)
     {
@@ -142,7 +139,9 @@ public class RunState : State
     }
     public override void ExecuteState(AIMovement Agent)
     {
+        //run timer increase
         Agent.IdleRunTimer += Time.deltaTime;
+
         if (Agent.Scared)
         {
             Start = Agent.CurrentRoom;
@@ -157,6 +156,7 @@ public class RunState : State
     public override void Exit(AIMovement Agent)
     {
         Agent.Scared = false;
+        Agent.IdleRunTimer = 0;
     }
 }
 public class FleeState : State
@@ -172,7 +172,11 @@ public class FleeState : State
     }
     public override void ExecuteState(AIMovement Agent)
     {
-        if (Vector3.Distance(Agent.agent.transform.position, Agent.Exit.position) <= 2)
+        if (Agent.agent.isOnOffMeshLink)
+        {
+            this.Exit(Agent);
+        }
+        else if (Vector3.Distance(Agent.agent.transform.position, Agent.Exit.position) <= 2)
         {
             this.Exit(Agent);
         }
@@ -192,7 +196,7 @@ public class WanderToIdleTrans : Transition
     public override bool ChangeState(AIMovement Agent)
     {
         Debug.Log("WanderToIdleTriggered", Agent);
-        if (Random.Range(0, 10) <= 6)
+        if (!Agent.agent.hasPath && Random.Range(0, 10) <= 6)
         {
             return true;
         }

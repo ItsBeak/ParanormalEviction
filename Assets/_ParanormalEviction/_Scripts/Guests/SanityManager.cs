@@ -47,11 +47,11 @@ public class SanityManager : MonoBehaviour
     {
         if (Guest.Scareable == true)
         {
-            if (Guest.Idle)
-                sanityLevel -= amount;
-            sanityLevel -= amount;
-
-            gauge.SetFillAmount(sanityLevel);          
+            if (Guest.Idle == true) { sanityLevel -= amount * 1.5f; }
+            else {sanityLevel -= amount; }   
+            
+            gauge.SetFillAmount(sanityLevel); 
+                     
         }
         Guest.Scared = true;
     }
