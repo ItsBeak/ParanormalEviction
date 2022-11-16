@@ -50,6 +50,7 @@ public class Doorway : MonoBehaviour
             contact = true;
             rend.material = contactTrue;
             doorReadout.text = "Press E to Enter Door";
+            RoomManager.Instance.isInDoorway = true;
         }
     }
 
@@ -60,6 +61,7 @@ public class Doorway : MonoBehaviour
             contact = false;
             rend.material = contactFalse;
             doorReadout.text = "";
+            RoomManager.Instance.isInDoorway = false;
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Possesion : MonoBehaviour
 {
     public Possesable Active;
-    public GameObject mesh;
+    public SkinnedMeshRenderer rend;
     PlayerMovement movement;
     bool Possesing;
     public static Possesion Instance { get; private set;}
@@ -15,11 +15,14 @@ public class Possesion : MonoBehaviour
     public AudioClip possessEnter;
     public AudioClip possessExit;
 
+    float ghostFadeAmount;
+
     public void Start()
     {
         movement = GetComponent<PlayerMovement>();
         Possesing = false;
         source = GetComponent<AudioSource>();
+        ghostFadeAmount = 1f;
     }
 
     
@@ -28,25 +31,21 @@ public class Possesion : MonoBehaviour
 
         if (Active)
         {
-            mesh.SetActive(false);
             movement.CanMove = false;
 
             Active.interactionDisplay.text = "Press Space to Scare";
 
-            if (Input.GetKeyDown(KeyCode.Q))
+            if (Input.GetKeyDown(KeyCode.E))
             {
-                if (Possesing == true)
+                if (Possesing)
                 {
-                    Active.interactionDisplay.text = "Press Q to Possess";
+                    Active.interactionDisplay.text = "Press E to Possess";
                     Active = null;
                     Possesing = false;
-                    Debug.LogWarning("2nd");
                     source.PlayOneShot(possessExit);
                 }
-
                 else
                 {
-                    Debug.LogWarning("1st");
                     Possesing = true;
                     source.PlayOneShot(possessEnter);
                 }
@@ -63,9 +62,37 @@ public class Possesion : MonoBehaviour
         }
         else
         {
-            mesh.SetActive(true);
             movement.CanMove = true;
         }
+
+    }
+
+    private void Update()
+    {
+        if (Possesing)
+        {
+            if (ghostFadeAmount < 1)
+            {
+                ghostFadeAmount += Time.deltaTime * 2;
+            }
+            if (ghostFadeAmount > 1)
+            {
+                ghostFadeAmount = 1;
+            }
+        }
+        else
+        {
+            if (ghostFadeAmount > 0)
+            {
+                ghostFadeAmount -= Time.deltaTime * 2;
+            }
+            if (ghostFadeAmount < 0)
+            {
+                ghostFadeAmount = 0;
+            }
+        }
+
+        rend.material.SetFloat("DissolveAmount", ghostFadeAmount);
 
     }
 
@@ -80,4 +107,5 @@ public class Possesion : MonoBehaviour
             Instance = this;
         }
     }
+
 }
