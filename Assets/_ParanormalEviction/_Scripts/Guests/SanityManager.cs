@@ -51,10 +51,9 @@ public class SanityManager : MonoBehaviour
                 sanityLevel -= amount;
             sanityLevel -= amount;
 
-            gauge.SetFillAmount(sanityLevel);
-
-            Guest.CheckSan();
+            gauge.SetFillAmount(sanityLevel);          
         }
+        Guest.Scared = true;
     }
 
     public void Calm(float amount)
