@@ -82,9 +82,8 @@ public class WanderState : State
     public override void Enter(AIMovement Agent)
     {
         Agent.Scareable = true;
-        Agent.Idle = false;
         Agent.agent.speed = Random.Range(Agent.MinSpeed, Agent.MaxSpeed);
-        Agent.agent.angularSpeed = 120;
+        Agent.agent.angularSpeed = 360;
         Agent.agent.avoidancePriority = 5;
 
     }
@@ -114,7 +113,6 @@ public class IdleState : State
 {
     public override void Enter(AIMovement Agent)
     {
-        Agent.Scareable = true;
         Agent.Idle = true;
         Agent.agent.avoidancePriority = 1;
     }
@@ -126,6 +124,7 @@ public class IdleState : State
     public override void Exit(AIMovement Agent)
     {
         Agent.IdleRunTimer = 0;
+        Agent.Idle = false;
     }
 }
 
@@ -137,7 +136,7 @@ public class RunState : State
         Agent.agent.avoidancePriority = 3;
         Agent.Idle = false;
         Agent.agent.speed += 5;
-        Agent.agent.angularSpeed = 240;
+        Agent.agent.angularSpeed = 600;
         Agent.Scareable = false;
         Start = Agent.CurrentRoom;
     }
@@ -165,9 +164,10 @@ public class FleeState : State
     public override void Enter(AIMovement Agent)
     {
         Agent.Scareable = false;
-        Agent.agent.speed = Agent.FleeSpeed;
-        Agent.agent.angularSpeed = 360;
+        Agent.agent.speed = 0; // line to try stopping the agent in place
+        Agent.agent.angularSpeed = 720;
         Agent.agent.avoidancePriority = 2;
+        Agent.agent.speed = Agent.FleeSpeed;
         Agent.agent.SetDestination(Agent.Exit.position);
     }
     public override void ExecuteState(AIMovement Agent)
@@ -237,7 +237,7 @@ public class IdleToWanderTrans : Transition
     public override bool ChangeState(AIMovement Agent)
     {
         Debug.Log("IdleToWanderTrans", Agent);
-        if (Agent.Idle && Agent.IdleRunTimer >= Agent.IdleRunTimerMax)
+        if (Agent.Idle && Agent.IdleRunTimer >= Agent.IdleTimerMax)
         {
             return true;
         }
@@ -288,7 +288,7 @@ public class RunToWanderTrans : Transition
     public override bool ChangeState(AIMovement Agent)
     {
         Debug.Log("RunToWanderTriggered", Agent);
-        if (!Agent.Idle && Agent.IdleRunTimer > Agent.IdleRunTimerMax)
+        if (!Agent.Idle && Agent.IdleRunTimer > Agent.RunTimerMax)
         {
             return true;
         }

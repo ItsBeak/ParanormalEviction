@@ -13,7 +13,8 @@ public class AIMovement : MonoBehaviour
     /// Dual use timer for both Idle and Run State Duration
     /// </summary>
     public float IdleRunTimer = 0;
-    public float IdleRunTimerMax = 4;
+    public float RunTimerMax = 10;
+    public float IdleTimerMax = 4;
     public Transform Exit;
     public WanderManager pointManager;
     public AITracker Tracker;
@@ -81,7 +82,9 @@ public class AIMovement : MonoBehaviour
         // Movement between rooms code.
         if (agent.isOnOffMeshLink)
         {
+            //Rend.enabled = false; This solution failed.
             agent.CompleteOffMeshLink();
+            //Rend.enabled = true;
             agent.speed = Random.Range(MinSpeed, MaxSpeed);
         }
 
