@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5686976393342339751}
   - component: {fileID: 5686976393342339745}
   - component: {fileID: 5686976393342339744}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SanityBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 5686976393494613083}
   - component: {fileID: 5686976393494613077}
   - component: {fileID: 5686976393494613076}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SanityColour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 5686976394028340645}
   - component: {fileID: 5686976394028340644}
   - component: {fileID: 5686976394028340651}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Overhead UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -274,7 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5686976394521518028}
   - component: {fileID: 5686976394521518029}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SanityGauge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -309,3 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillImage: {fileID: 5686976393494613076}
+  happy: {fileID: 0}
+  flat: {fileID: 0}
+  sad: {fileID: 0}
+  rend: {fileID: 0}

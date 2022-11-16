@@ -110,18 +110,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb95249de14c5d49b0dfb17fcd1d1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scariness: 25
+  scareRadius: 3
+  cooldownTime: 5
+  timeBeforeScareTrigger: 0
   animators: []
   audioSources: []
   particleSystems:
   - {fileID: 8227686296918212285}
   interactionDisplay: {fileID: 0}
-  scariness: 25
-  scareRadius: 3
+  cooldownIndicator: {fileID: 3511733894841998772}
   guestLayer:
     serializedVersion: 2
     m_Bits: 32768
-  cooldownTime: 5
-  cooldownIndicator: {fileID: 3511733894841998772}
 --- !u!1 &8887594490956386914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5078,6 +5079,10 @@ PrefabInstance:
     - target: {fileID: 3996162182481695393, guid: cd618bd4cd9e544418c62dcad2d6c4ed, type: 3}
       propertyPath: m_Name
       value: Possessable Overhead UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5231577718682288062, guid: cd618bd4cd9e544418c62dcad2d6c4ed, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd618bd4cd9e544418c62dcad2d6c4ed, type: 3}

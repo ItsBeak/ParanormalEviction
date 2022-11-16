@@ -50,7 +50,7 @@ public class Possesable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && canPossess)
+        if (Input.GetKeyDown(KeyCode.Q) && canPossess)
         {
             Possesion.Instance.Active = this;
             Debug.LogWarning("Setting active object");
@@ -70,7 +70,7 @@ public class Possesable : MonoBehaviour
         if (other.gameObject.tag == "Player" && Possesion.Instance.Active == null)
         {
             canPossess = true;
-            interactionDisplay.text = "Press E to Possess";
+            interactionDisplay.text = "Press Q to Possess";
         }
     }
 
@@ -125,8 +125,8 @@ public class Possesable : MonoBehaviour
 
     void Scare()
     {
-        Collider[] hitGuests = Physics.OverlapSphere(transform.position, scareRadius, guestLayer);
-
+        Collider[] hitGuests = Physics.OverlapCapsule(new Vector3(transform.position.x, transform.position.y - 3, transform.position.z), new Vector3(transform.position.x, transform.position.y + 3, transform.position.z), scareRadius, guestLayer);
+        
         if (hitGuests.Length == 0)
         {
             Debug.Log("No guests, early outing");
