@@ -8,12 +8,18 @@ public class Possesion : MonoBehaviour
     public GameObject mesh;
     PlayerMovement movement;
     bool Possesing;
-    public static Possesion Instance { get; private set;}    
+    public static Possesion Instance { get; private set;}
+
+    [Header("Audio")]
+    AudioSource source;
+    public AudioClip possessEnter;
+    public AudioClip possessExit;
 
     public void Start()
     {
         movement = GetComponent<PlayerMovement>();
         Possesing = false;
+        source = GetComponent<AudioSource>();
     }
 
     
@@ -35,12 +41,14 @@ public class Possesion : MonoBehaviour
                     Active = null;
                     Possesing = false;
                     Debug.LogWarning("2nd");
+                    source.PlayOneShot(possessExit);
                 }
 
                 else
                 {
                     Debug.LogWarning("1st");
                     Possesing = true;
+                    source.PlayOneShot(possessEnter);
                 }
             }
             

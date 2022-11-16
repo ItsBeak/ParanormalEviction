@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Timer")]
     public float gameTimeMax;
-    float timer;
+    public float timer;
 
     [Header("Guests")]
     public int guestTarget;
