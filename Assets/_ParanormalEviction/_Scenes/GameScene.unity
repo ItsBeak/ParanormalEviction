@@ -701,6 +701,7 @@ MonoBehaviour:
   - {fileID: 2101554181}
   - {fileID: 1663579220}
   roomNameReadout: {fileID: 389474498}
+  isInDoorway: 0
 --- !u!82 &74958960
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9986,6 +9987,14 @@ PrefabInstance:
     - target: {fileID: 2150568069952758864, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2851680387991375652, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: isGlobal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2851680387991375652, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
+      propertyPath: priority
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3681258635403147124, guid: 27e886aff32e58549bd12c3ec22ea26a, type: 3}
       propertyPath: m_RootOrder
