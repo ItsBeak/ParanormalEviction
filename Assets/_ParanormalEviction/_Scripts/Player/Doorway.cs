@@ -14,7 +14,11 @@ public class Doorway : MonoBehaviour
     public bool contact = false;
     BoxCollider trigger;
 
-    [Header("Temporary Variables")]
+    [Header("Audio")]
+    AudioSource source;
+    public AudioClip doorClip;
+
+    [Header("Debug Variables")]
     public Material contactTrue;
     public Material contactFalse;
     public MeshRenderer rend;
@@ -26,6 +30,7 @@ public class Doorway : MonoBehaviour
         rend.material = contactFalse;
         doorReadout.text = "";
         doorReadout = GameObject.Find("DoorReadout").GetComponent<Text>();
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -34,6 +39,7 @@ public class Doorway : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && contact)
         {
             RoomManager.Instance.ChangeRoom(targetRoom, locationID);
+            source.PlayOneShot(doorClip);
         }
     }
 
@@ -44,6 +50,7 @@ public class Doorway : MonoBehaviour
             contact = true;
             rend.material = contactTrue;
             doorReadout.text = "Press E to Enter Door";
+            RoomManager.Instance.isInDoorway = true;
         }
     }
 
@@ -54,6 +61,7 @@ public class Doorway : MonoBehaviour
             contact = false;
             rend.material = contactFalse;
             doorReadout.text = "";
+            RoomManager.Instance.isInDoorway = false;
         }
     }
 
