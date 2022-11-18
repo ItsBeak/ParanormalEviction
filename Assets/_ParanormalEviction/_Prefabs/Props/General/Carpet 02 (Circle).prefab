@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5665976497961419191}
   m_Layer: 11
-  m_Name: Kitchen Bench
+  m_Name: Carpet 02 (Circle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,73 +27,73 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 844483569184645079}
+  - {fileID: 478183700679625319}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &878918987316656188
+--- !u!1001 &83423210013027724
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 5665976497961419191}
     m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+    - target: {fileID: -7511558181221131132, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: d463011c853e7054fa42edac67297b59, type: 2}
-    - target: {fileID: 919132149155446097, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
+      objectReference: {fileID: 2100000, guid: f8c63cef7356b2244aff210f32734fe8, type: 2}
+    - target: {fileID: 919132149155446097, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
       propertyPath: m_Name
-      value: prop_bench_01
+      value: prop_roundcarpet_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
---- !u!4 &844483569184645079 stripped
+  m_SourcePrefab: {fileID: 100100000, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
+--- !u!4 &478183700679625319 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e70f2d05ab02349478349a72b25ec98f, type: 3}
-  m_PrefabInstance: {fileID: 878918987316656188}
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f2e637579fb6de84da26eaf75f1a4a1e, type: 3}
+  m_PrefabInstance: {fileID: 83423210013027724}
   m_PrefabAsset: {fileID: 0}
