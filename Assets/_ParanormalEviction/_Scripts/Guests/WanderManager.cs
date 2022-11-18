@@ -29,25 +29,27 @@ public class WanderManager : MonoBehaviour
 
         Transform Record = null;
         int pickpoint;
-        foreach (var t in PointRequests)
-        {
-            if (t.Value == AI)
-            {
-                Record = t.Key;
-                PointRequests.Remove(t.Key);
-                break;
-            }
-        }
+
 
         GameObject OtherAI;
         do
         {
-            pickpoint = Mathf.FloorToInt(Random.Range(0f, rooms[room].childCount));
+            pickpoint = Random.Range(0, rooms[room].childCount);
             Record = rooms[room].GetChild(pickpoint);
         }
         while (PointRequests.TryGetValue(Record, out OtherAI) && OtherAI != null);
+
+        foreach (var t in PointRequests)
+        {
+            if (t.Value == AI)
+            {
+                PointRequests.Remove(t.Key);
+                break;
+            }
+        }
         PointRequests.Remove(Record);
         PointRequests.Add(Record, AI);
+        Debug.LogWarning("Room Point taken: " + Record.name, Record);
         return Record;
     }
 }
