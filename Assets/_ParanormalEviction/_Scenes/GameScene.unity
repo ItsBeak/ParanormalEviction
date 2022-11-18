@@ -4294,7 +4294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178077173156006377, guid: d81441df911dee84ab7bd5cc0db2c84f, type: 3}
       propertyPath: m_Name
-      value: Guest
+      value: Guest 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d81441df911dee84ab7bd5cc0db2c84f, type: 3}
@@ -7871,7 +7871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178077173156006377, guid: d81441df911dee84ab7bd5cc0db2c84f, type: 3}
       propertyPath: m_Name
-      value: Guest
+      value: Guest 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d81441df911dee84ab7bd5cc0db2c84f, type: 3}
@@ -12783,7 +12783,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3178077173156006377, guid: d81441df911dee84ab7bd5cc0db2c84f, type: 3}
       propertyPath: m_Name
-      value: Guest
+      value: Guest 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d81441df911dee84ab7bd5cc0db2c84f, type: 3}
