@@ -6,10 +6,10 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float speed = 3f; //Controls velocity multiplier
-    Rigidbody rb; //Tells script there is a rigidbody, we can use variable rb to reference it in further script
+    [HideInInspector] public Rigidbody rb; //Tells script there is a rigidbody, we can use variable rb to reference it in further script
     public bool CanMove;
 
-    Vector3 moveDir;
+    [HideInInspector] Vector3 moveDir;
 
     public Transform characterModel;
 
@@ -35,8 +35,9 @@ public class PlayerMovement : MonoBehaviour
         if (Camera.main)
             rb.velocity = (moveDir.x * Camera.main.transform.right + moveDir.z * Camera.main.transform.forward) * speed;// Creates velocity in direction of value equal to keypress (WASD).
 
-        if (rb.velocity != Vector3.zero)
+        if (rb.velocity != Vector3.zero && Time.timeScale != 0)
             characterModel.rotation = Quaternion.LookRotation(rb.velocity);
+            
 
     }
 }

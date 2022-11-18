@@ -101,7 +101,7 @@ PrefabInstance:
     - target: {fileID: -240839849851652430, guid: cfc0665c637c8b34d83b58d30aa23220, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 389d0ab1ede545c49a7a744511f876b7, type: 2}
+      objectReference: {fileID: 2100000, guid: f8c63cef7356b2244aff210f32734fe8, type: 2}
     - target: {fileID: 919132149155446097, guid: cfc0665c637c8b34d83b58d30aa23220, type: 3}
       propertyPath: m_Name
       value: Carpet 01 (square)

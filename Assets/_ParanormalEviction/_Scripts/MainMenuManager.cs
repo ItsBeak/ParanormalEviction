@@ -8,9 +8,11 @@ public class MainMenuManager : MonoBehaviour
 {
     public GameObject MenuCanvas;
     public GameObject CreditsCanvas;
+    public GameObject TutorialCanvas;
     public void Play()
     {
-        SceneManager.LoadScene("GameScene");
+        MenuCanvas.SetActive(false);
+        TutorialCanvas.SetActive(true);
     }
 
     public void Credits()
@@ -25,6 +27,10 @@ public class MainMenuManager : MonoBehaviour
         CreditsCanvas.SetActive(false);
     }
 
+    public void Continue()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
     public void Quit()
     {
         Application.Quit();
