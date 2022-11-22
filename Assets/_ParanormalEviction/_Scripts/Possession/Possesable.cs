@@ -35,9 +35,6 @@ public class Possesable : MonoBehaviour
     
     public LayerMask guestLayer;
 
-
-
-
     float timer;
     bool canPossess;
     bool cooldown;
@@ -50,7 +47,7 @@ public class Possesable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && canPossess)
+        if (Input.GetKeyDown(KeyCode.E) && canPossess)
         {
             Possesion.Instance.Active = this;
             Debug.LogWarning("Setting active object");
@@ -65,12 +62,19 @@ public class Possesable : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player" && Possesion.Instance.Active == null)
         {
-            canPossess = true;
-            interactionDisplay.text = "Press Q to Possess";
+            if (RoomManager.Instance.isInDoorway == false)
+            {
+                canPossess = true;
+                interactionDisplay.text = "Press E to Possess";
+            }
+            else
+            {
+                canPossess = false;
+            }
         }
     }
 

@@ -24,6 +24,8 @@ public class RoomManager : MonoBehaviour
     int targetTeleportLocationID;
     bool isBusy;
 
+    public bool isInDoorway;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
