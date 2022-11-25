@@ -5434,6 +5434,22 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 5657709811721368254, guid: 9bd0781e30a47e044848965ea3291bcf, type: 3}
+      propertyPath: m_Size.x
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657709811721368254, guid: 9bd0781e30a47e044848965ea3291bcf, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657709811721368254, guid: 9bd0781e30a47e044848965ea3291bcf, type: 3}
+      propertyPath: m_Size.z
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657709811721368254, guid: 9bd0781e30a47e044848965ea3291bcf, type: 3}
+      propertyPath: m_Center.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7519593989857254424, guid: 9bd0781e30a47e044848965ea3291bcf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
