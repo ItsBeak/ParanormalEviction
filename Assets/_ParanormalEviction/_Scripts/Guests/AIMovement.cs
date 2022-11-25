@@ -29,7 +29,8 @@ public class AIMovement : MonoBehaviour
     FSM fsm = new FSM();
     MeshRenderer Rend;
     public GameObject overheadUI;
-
+    public Animator animator;
+    State Wander = new WanderState();
 
 
     private void Awake()
@@ -37,10 +38,11 @@ public class AIMovement : MonoBehaviour
         //setting up the Agent
         Rend = GetComponentInChildren<MeshRenderer>();    
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
-
+        animator = GetComponentInChildren<Animator>();
+        
 
         //Setting up state Machine
-        State Wander = new WanderState();
+        
         State Idle = new IdleState();
         State Run = new RunState();
         State Flee = new FleeState();
@@ -52,24 +54,26 @@ public class AIMovement : MonoBehaviour
         Transition IToR = new IdleToRunTrans(Run);
         Transition IToF = new IdleToFleeTrans(Flee);
         Transition RToW = new RunToWanderTrans(Wander);
-
+    
+        fsm.AddTransition(Wander, WToF);    
         fsm.AddTransition(Wander, WToI);
-        fsm.AddTransition(Wander, WToR);
-        fsm.AddTransition(Wander, WToF);
-        fsm.AddTransition(Idle, IToW);
-        fsm.AddTransition(Idle, IToR);
+        fsm.AddTransition(Wander, WToR); 
         fsm.AddTransition(Idle, IToF);
+        fsm.AddTransition(Idle, IToW);
+        fsm.AddTransition(Idle, IToR);       
         fsm.AddTransition(Run, RToW);
-        fsm.SetCurrentState(Wander, this);
+        
     }
     void Start()
-    { 
+    {
         pointManager = GameObject.Find("WanderMarkers").GetComponent<WanderManager>();
         CurrentRoom = pointManager.GetRoom();
-        agent.destination = pointManager.RandPointInRoom(CurrentRoom, gameObject).position;        
+        //agent.destination = pointManager.RandPointInRoom(CurrentRoom, gameObject).position;        
         sanity = GetComponent<SanityManager>();
         Tracker = GetComponentInParent<AITracker>();        
         Exit = GameObject.Find("_ExitPoint").transform;
+
+        fsm.SetCurrentState(Wander, this);
     }
 
     // Update is called once per frame
@@ -78,20 +82,6 @@ public class AIMovement : MonoBehaviour
         // Executes the current state then checks for valid transitions if one is found next state = transission state
         // then exit current state enter next state current state = next state
         fsm.UpdateState(this);
-
-        // Movement between rooms code.
-        if (agent.isOnOffMeshLink)
-        {
-            //Rend.enabled = false; This solution failed.
-            agent.CompleteOffMeshLink();
-        }
-        // For some reason the code above and below breaks down when I add it into a state
-        if (roomTimer >= timeInRoom)
-        {
-            CurrentRoom = pointManager.GetRoom();
-            roomTimer = 0;
-        }
-
     }
 
     /// <summary>
