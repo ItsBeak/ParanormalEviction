@@ -4849,6 +4849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b38adba0504aaa942a9f763c23a1b74a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  particle: {fileID: 0}
-  system: {fileID: 0}
+  particle: {fileID: 2445978440708529269}
+  system: {fileID: 2445978440708529271}
   playerPossession: {fileID: 0}

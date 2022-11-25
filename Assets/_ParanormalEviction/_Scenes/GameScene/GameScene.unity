@@ -2298,7 +2298,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5665976497961419191, guid: 88fe9a59b23278d4f9088f23485cb7d8, type: 3}
       propertyPath: m_RootOrder
-      value: 40
+      value: 34
       objectReference: {fileID: 0}
     - target: {fileID: 5665976497961419191, guid: 88fe9a59b23278d4f9088f23485cb7d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2843,6 +2843,10 @@ PrefabInstance:
       propertyPath: m_InnerSpotAngle
       value: 60.393204
       objectReference: {fileID: 0}
+    - target: {fileID: 6397287924065656735, guid: 7cf414210cc104b4ca904c78502392fd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11720545427894d429c82bc015d459bc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf414210cc104b4ca904c78502392fd, type: 3}
 --- !u!4 &423218658 stripped
@@ -3525,6 +3529,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.4999933
       objectReference: {fileID: 0}
+    - target: {fileID: 6259469549521977768, guid: bbe7faae0f90b3a45840638a74870eb6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11720545427894d429c82bc015d459bc, type: 2}
     - target: {fileID: 6259469549722040756, guid: bbe7faae0f90b3a45840638a74870eb6, type: 3}
       propertyPath: m_Intensity
       value: 8.27
@@ -3759,6 +3767,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: _DEC_EntranceRoom
       objectReference: {fileID: 0}
+    - target: {fileID: 909637388530044080, guid: b2c35586b46fb114b9d226fed1ac7d98, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11720545427894d429c82bc015d459bc, type: 2}
     - target: {fileID: 909637388889192099, guid: b2c35586b46fb114b9d226fed1ac7d98, type: 3}
       propertyPath: m_Intensity
       value: 8.27
@@ -4745,6 +4757,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.9999814
       objectReference: {fileID: 0}
+    - target: {fileID: 429473952653525275, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11720545427894d429c82bc015d459bc, type: 2}
     - target: {fileID: 610597138367535473, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
@@ -4752,6 +4768,14 @@ PrefabInstance:
     - target: {fileID: 805151867584210766, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449761387796815495, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
+      propertyPath: audioSources.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449761387796815495, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
+      propertyPath: particleSystems.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2220659274877347617, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9979,6 +10003,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.5000067
       objectReference: {fileID: 0}
+    - target: {fileID: 3614107742294825493, guid: 510033cc71aadba43ad65f74257d0f4b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11720545427894d429c82bc015d459bc, type: 2}
     - target: {fileID: 3614107742564922672, guid: 510033cc71aadba43ad65f74257d0f4b, type: 3}
       propertyPath: m_Name
       value: _DEC_Bathroom
@@ -10173,6 +10201,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.00001859665
       objectReference: {fileID: 0}
+    - target: {fileID: 7521236218983197607, guid: 74e99a7c88c587c489a041c935fc8d2b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11720545427894d429c82bc015d459bc, type: 2}
     - target: {fileID: 8305866886916753383, guid: 74e99a7c88c587c489a041c935fc8d2b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 1
@@ -13260,7 +13292,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 50c8ce9c6638dfc4784bf1cd1910a826, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 188254ccbdc47a842bc90b92224a4583, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
@@ -15215,6 +15247,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1681409262}
     m_Modifications:
+    - target: {fileID: 6993344222351844409, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 11720545427894d429c82bc015d459bc, type: 2}
     - target: {fileID: 6993344223811722733, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
       propertyPath: m_RootOrder
       value: 2
