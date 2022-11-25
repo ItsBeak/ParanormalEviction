@@ -5,19 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/_ParanormalEviction/_Scenes/MainMenu/Main Menu.unity
-    guid: f78e20430f6c18c46b5bc3e5c4903ccc
+    path: Assets/_ParanormalEviction/_Scenes/MainMenu/Menu.unity
+    guid: 6404cb4b83a30234a8b156897c6eefd5
   - enabled: 1
-    path: Assets/_ParanormalEviction/_Scenes/GameScene.unity
+    path: Assets/_ParanormalEviction/_Scenes/GameScene/GameScene.unity
     guid: 2f9419e38b072d74c9f8475d1c1a8f32
   - enabled: 1
-    path: Assets/_ParanormalEviction/_Scenes/WinScene.unity
+    path: Assets/_ParanormalEviction/_Scenes/WinLose/WinScene.unity
     guid: 81b71b9406859294db17dc9f30e4baa6
   - enabled: 1
-    path: Assets/_ParanormalEviction/_Scenes/LoseScene.unity
+    path: Assets/_ParanormalEviction/_Scenes/WinLose/LoseScene.unity
     guid: c509e723ad02b1048b6c0ce0d59c9cc9
   m_configObjects: {}

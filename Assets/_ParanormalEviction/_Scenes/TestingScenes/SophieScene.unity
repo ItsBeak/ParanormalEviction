@@ -19948,6 +19948,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   roomNameReadout: {fileID: 0}
+  isInDoorway: 0
 --- !u!1 &1152230976
 GameObject:
   m_ObjectHideFlags: 0
@@ -27499,7 +27500,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6397287922069047983, guid: 7cf414210cc104b4ca904c78502392fd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6397287922069047983, guid: 7cf414210cc104b4ca904c78502392fd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -27542,6 +27543,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1751752938}
     m_Modifications:
+    - target: {fileID: 381463160026407537, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 381463160026407537, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 381463160026407537, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 381463160026407537, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6993344223811722733, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
       propertyPath: m_RootOrder
       value: 3

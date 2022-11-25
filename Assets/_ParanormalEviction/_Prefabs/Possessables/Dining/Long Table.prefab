@@ -52,8 +52,7 @@ MonoBehaviour:
   timeBeforeScareTrigger: 0.2
   animators: []
   audioSources: []
-  particleSystems:
-  - {fileID: 0}
+  particleSystems: []
   interactionDisplay: {fileID: 0}
   cooldownIndicator: {fileID: 1915315892053373718}
   guestLayer:
