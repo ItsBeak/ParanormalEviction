@@ -51,12 +51,10 @@ MonoBehaviour:
   scareRadius: 3
   cooldownTime: 5
   timeBeforeScareTrigger: 0
-  animators:
-  - {fileID: 0}
+  animators: []
   audioSources:
   - {fileID: 981196594449322184}
-  particleSystems:
-  - {fileID: 0}
+  particleSystems: []
   interactionDisplay: {fileID: 0}
   cooldownIndicator: {fileID: 7863051173617350317}
   guestLayer:
