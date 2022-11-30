@@ -59,10 +59,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb95249de14c5d49b0dfb17fcd1d1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scariness: 0
-  scareRadius: 0
-  cooldownTime: 0
-  timeBeforeScareTrigger: 0
+  scariness: 25
+  scareRadius: 4
+  cooldownTime: 20
+  timeBeforeScareTrigger: 0.2
   animators:
   - {fileID: 433472700430894739}
   audioSources: []
