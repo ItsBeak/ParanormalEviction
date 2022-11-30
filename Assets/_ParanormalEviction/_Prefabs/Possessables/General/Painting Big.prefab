@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb95249de14c5d49b0dfb17fcd1d1bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scariness: 25
+  scariness: 30
   scareRadius: 3
   cooldownTime: 5
   timeBeforeScareTrigger: 0
