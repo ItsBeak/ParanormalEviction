@@ -18,6 +18,8 @@ public class ScareRadiusIndicator : MonoBehaviour
     {
         if (playerPossession.Active)
         {
+            system.Stop();
+            system.Play();
             transform.position = new Vector3(playerPossession.Active.gameObject.transform.position.x, 0, playerPossession.Active.gameObject.transform.position.z);
 
             var shape = system.shape;

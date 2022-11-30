@@ -169,6 +169,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5004755541803432873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622229878523507714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f5720a00cd27e43a0af63e221f23d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6731999973069406504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -224,11 +236,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: prop_paintingshakebig_01_anim
       objectReference: {fileID: 0}
+    - target: {fileID: 3337922963062150864, guid: 7b75eae8942b7af4d9eb2d882303f70e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 36c2710c966e3e04fa59c1d507ff1b79, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b75eae8942b7af4d9eb2d882303f70e, type: 3}
 --- !u!4 &6550036179750790851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b75eae8942b7af4d9eb2d882303f70e, type: 3}
+  m_PrefabInstance: {fileID: 6731999973069406504}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2622229878523507714 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8721456388933612842, guid: 7b75eae8942b7af4d9eb2d882303f70e, type: 3}
   m_PrefabInstance: {fileID: 6731999973069406504}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7265380793970327540

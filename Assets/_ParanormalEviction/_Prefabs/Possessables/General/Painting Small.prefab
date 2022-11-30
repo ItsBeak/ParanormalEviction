@@ -31,6 +31,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5961071592164808941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6300610319173272962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49f5720a00cd27e43a0af63e221f23d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7272507441556631439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -86,10 +98,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: prop_paintingshakesmall_01_anim
       objectReference: {fileID: 0}
+    - target: {fileID: 8616339804106186443, guid: 43ce98c15b3c608429a67423c283c561, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 36c2710c966e3e04fa59c1d507ff1b79, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ce98c15b3c608429a67423c283c561, type: 3}
 --- !u!4 &7162864714582804580 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 43ce98c15b3c608429a67423c283c561, type: 3}
+  m_PrefabInstance: {fileID: 7272507441556631439}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6300610319173272962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3719235831796722189, guid: 43ce98c15b3c608429a67423c283c561, type: 3}
   m_PrefabInstance: {fileID: 7272507441556631439}
   m_PrefabAsset: {fileID: 0}
