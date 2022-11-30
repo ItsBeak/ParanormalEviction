@@ -22,22 +22,43 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!CanMove)
         {
-            moveDir.x = 0;
-            moveDir.y = 0;
             rb.velocity = Vector3.zero;
             return;
-        }   
-
+        }
+        Vector3 ForwardDir = Vector3.zero;
+#if !UNITY_ANDROID
         moveDir.x = Input.GetAxisRaw("Horizontal"); // d key changes value to 1, a key changes value to -1
         moveDir.z = Input.GetAxisRaw("Vertical"); // w key changes value to 1, s key changes value to -1
-        moveDir = moveDir.normalized;
+#endif
+        ForwardDir = moveDir;
+        ForwardDir.Normalize();
 
         if (Camera.main)
-            rb.velocity = (moveDir.x * Camera.main.transform.right + moveDir.z * Camera.main.transform.forward) * speed;// Creates velocity in direction of value equal to keypress (WASD).
+            rb.velocity = (ForwardDir.x * Camera.main.transform.right + ForwardDir.z * Camera.main.transform.forward) * speed;// Creates velocity in direction of value equal to keypress (WASD).
 
         if (rb.velocity != Vector3.zero && Time.timeScale != 0)
             characterModel.rotation = Quaternion.LookRotation(rb.velocity);
             
 
+    }
+
+    public void MoveUp()
+    {
+        moveDir.z += 1;
+    }
+
+    public void MoveLeft()
+    {
+        moveDir.x -= 1; 
+    }
+
+    public void MoveDown()
+    {
+        moveDir.z -= 1;
+    }
+
+    public void MoveRight()
+    {
+        moveDir.x += 1;
     }
 }

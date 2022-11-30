@@ -20,16 +20,4 @@ public class DoorCollision : MonoBehaviour
         
 
     }
-
-
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-
-    }
 }
