@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 3805461949944835440}
   - component: {fileID: 2276938351397571300}
   - component: {fileID: 295934017052122929}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Continue Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +499,7 @@ GameObject:
   - component: {fileID: 6157677275877437573}
   - component: {fileID: 2518673187188529182}
   - component: {fileID: 196589196326418011}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1024,7 +1024,7 @@ GameObject:
   - component: {fileID: 1082680428588047253}
   - component: {fileID: 6430475308732910565}
   - component: {fileID: 2119002285389978577}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Explain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1047,8 +1047,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -765}
-  m_SizeDelta: {x: 800, y: 200}
+  m_AnchoredPosition: {x: 0, y: -842}
+  m_SizeDelta: {x: 1100, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6430475308732910565
 CanvasRenderer:
@@ -1091,7 +1091,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Objective: Move around the house and scare away the unwanted guests!'
+  m_Text: 'Objective: Move around the house and use everyday household objects (highlighted
+    in purple) to scare away the unwanted guests!'
 --- !u!1 &3593086192369509412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,7 +1187,7 @@ GameObject:
   - component: {fileID: 2306922594447066712}
   - component: {fileID: 3056782591681416885}
   - component: {fileID: 5581349528698157287}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Possession
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1453,7 +1454,7 @@ GameObject:
   - component: {fileID: 6060153350037124117}
   - component: {fileID: 8941208040459782542}
   - component: {fileID: 2788429943724744729}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1528,7 +1529,7 @@ GameObject:
   - component: {fileID: 4524749710305995645}
   - component: {fileID: 7683821646949777022}
   - component: {fileID: 537154934309272005}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: W
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1603,7 +1604,7 @@ GameObject:
   - component: {fileID: 281507937316002750}
   - component: {fileID: 6494766492923928667}
   - component: {fileID: 698520963815854906}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1682,13 +1683,13 @@ GameObject:
   - component: {fileID: 1658574158409366538}
   - component: {fileID: 5067211583226853637}
   - component: {fileID: 6947597277578563142}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1658574158409366538
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1807,7 +1808,7 @@ GameObject:
   - component: {fileID: 1928327638940109153}
   - component: {fileID: 7361769126720148774}
   - component: {fileID: 2280438076648525065}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1882,7 +1883,7 @@ GameObject:
   - component: {fileID: 64728542564242317}
   - component: {fileID: 3528164209072712086}
   - component: {fileID: 4565643072324878326}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1965,7 +1966,7 @@ GameObject:
   - component: {fileID: 3431614053378287490}
   - component: {fileID: 1610123600417995857}
   - component: {fileID: 5466044280727923802}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Scaring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2045,7 +2046,7 @@ GameObject:
   - component: {fileID: 2432017154912157549}
   - component: {fileID: 2294816850543665693}
   - component: {fileID: 7343140891379695615}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2232,7 +2233,7 @@ GameObject:
   - component: {fileID: 3330611143408229908}
   - component: {fileID: 6769272003506804428}
   - component: {fileID: 7592493523776291879}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Space
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,7 +2308,7 @@ GameObject:
   - component: {fileID: 4457261448102598949}
   - component: {fileID: 798880328392323279}
   - component: {fileID: 5745540150851796084}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2383,7 +2384,7 @@ GameObject:
   - component: {fileID: 5573798864628703017}
   - component: {fileID: 6158397690798851400}
   - component: {fileID: 263313701810442788}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Tutorial Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2791,7 +2792,7 @@ GameObject:
   - component: {fileID: 2265090111823271610}
   - component: {fileID: 3300438556140365536}
   - component: {fileID: 2031119580229896258}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
