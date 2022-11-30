@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class GuestAppearance : MonoBehaviour
 {
+    [Header("Character Materials")]
+    public Material[] maleClothing;
+    public Material[] femaleClothing;
 
-    public Material[] skinMaterials;
-    public Material[] clothingMaterials;
+    [Header("Character Base")]
+    public SkinnedMeshRenderer baseRenderer;
 
-    SkinnedMeshRenderer rend;
+    public GameObject maleClothes;
+    public GameObject femaleClothes;
+
+    [Header("Character Components - Male")]
+    public SkinnedMeshRenderer belt;
+    public SkinnedMeshRenderer hat;
+    public SkinnedMeshRenderer malePants;
+    public SkinnedMeshRenderer sleeveL;
+    public SkinnedMeshRenderer sleeveR;
+
+    [Header("Character Components - Female")]
+    public SkinnedMeshRenderer hair;
+    public SkinnedMeshRenderer femalePants;
+    public SkinnedMeshRenderer skirt;
+    public SkinnedMeshRenderer cuffs;
 
     void Start()
     {
-        rend = GetComponentInChildren<SkinnedMeshRenderer>();
         RandomizeAppearance();
     }
 
@@ -26,11 +42,34 @@ public class GuestAppearance : MonoBehaviour
 
     public void RandomizeAppearance()
     {
-        Material[] newMats = new Material[2];
+       
+        int randomNumber = Random.Range(0, 2);
 
-        newMats[0] = skinMaterials[Random.Range(0, skinMaterials.Length)];
-        newMats[1] = clothingMaterials[Random.Range(0, clothingMaterials.Length)];
+        if (randomNumber == 0)
+        {
+            baseRenderer.material = maleClothing[Random.Range(0, maleClothing.Length)];
 
-        rend.materials = newMats;
+            belt.material = maleClothing[Random.Range(0, maleClothing.Length)];
+            hat.material = maleClothing[Random.Range(0, maleClothing.Length)];
+            sleeveL.material = baseRenderer.material;
+            sleeveR.material = baseRenderer.material;
+
+            maleClothes.SetActive(true);
+            femaleClothes.SetActive(false);
+
+        }
+        else
+        {
+            baseRenderer.material = femaleClothing[Random.Range(0, femaleClothing.Length)];
+
+            hair.material = femaleClothing[Random.Range(0, femaleClothing.Length)];
+            femalePants.material = femaleClothing[Random.Range(0, femaleClothing.Length)];
+            skirt.material = femaleClothing[Random.Range(0, femaleClothing.Length)];
+            cuffs.material = baseRenderer.material;
+
+            maleClothes.SetActive(false);
+            femaleClothes.SetActive(true);
+
+        }
     }
 }
