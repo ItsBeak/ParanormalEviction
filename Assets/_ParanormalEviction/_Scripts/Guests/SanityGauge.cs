@@ -12,7 +12,7 @@ public class SanityGauge : MonoBehaviour
     public Material flat;
     public Material sad;
 
-    public MeshRenderer rend;
+    public SkinnedMeshRenderer rend;
 
     public void SetFillAmount(float percentage)
     {
@@ -20,15 +20,15 @@ public class SanityGauge : MonoBehaviour
 
         if (percentage < 33)
         {
-            //rend.material = sad;
+            rend.material = sad;
         }
         else if (percentage < 66)
         {
-            //rend.material = flat;
+            rend.material = flat;
         }
         else
         {
-            //rend.material = happy;
+            rend.material = happy;
         }
 
     }

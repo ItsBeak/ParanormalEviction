@@ -7497,11 +7497,11 @@ PrefabInstance:
     - target: {fileID: -8670237515387783230, guid: 217a5701a6e87944cbe6e38a3a400f00, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3f7af313c53da9c40a2b17ef80555376, type: 2}
+      objectReference: {fileID: 2100000, guid: fa5a9dd67d24f9d428cc252e173ce6d7, type: 2}
     - target: {fileID: -839375074257532756, guid: 217a5701a6e87944cbe6e38a3a400f00, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: c51066fe70932c54da62ef8dbdf39037, type: 2}
+      objectReference: {fileID: 2100000, guid: fa5a9dd67d24f9d428cc252e173ce6d7, type: 2}
     - target: {fileID: 919132149155446097, guid: 217a5701a6e87944cbe6e38a3a400f00, type: 3}
       propertyPath: m_Name
       value: prop_couch_01_anim
@@ -16336,7 +16336,8 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3326285694679233328, guid: f13aa2ccdfabdad4c9a4e38f51426f0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f13aa2ccdfabdad4c9a4e38f51426f0d, type: 3}
 --- !u!4 &2021967167 stripped
 Transform:
