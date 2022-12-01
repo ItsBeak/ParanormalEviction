@@ -1418,8 +1418,8 @@ MonoBehaviour:
   cameraBase: {fileID: 359366157}
   roomCentre: {fileID: 917196516}
   roomIndicator: {fileID: 2028840488}
-  activeColour: {r: 0.34509805, g: 0.7529412, b: 0.3372549, a: 1}
-  inactiveColour: {r: 0.1882353, g: 0.28235295, b: 0.18431373, a: 1}
+  activeColour: {r: 0.17225882, g: 0.38791043, b: 0.745283, a: 1}
+  inactiveColour: {r: 0.11044855, g: 0.12192736, b: 0.3207547, a: 1}
 --- !u!1 &132351265
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,6 +3445,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1753321084203967096, guid: 53773b48fda59f34ea107b0dcfa0e8c0, type: 3}
   m_PrefabInstance: {fileID: 489881917}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &500595272 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6416330950727871955, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
+  m_PrefabInstance: {fileID: 647448286}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &504757015
 GameObject:
   m_ObjectHideFlags: 0
@@ -4173,8 +4178,8 @@ MonoBehaviour:
   cameraBase: {fileID: 570980418}
   roomCentre: {fileID: 1598777682}
   roomIndicator: {fileID: 746132966}
-  activeColour: {r: 0.34509805, g: 0.7529412, b: 0.3372549, a: 1}
-  inactiveColour: {r: 0.1882353, g: 0.28235295, b: 0.18431373, a: 1}
+  activeColour: {r: 0.17225882, g: 0.38791043, b: 0.745283, a: 1}
+  inactiveColour: {r: 0.11044855, g: 0.12192736, b: 0.3207547, a: 1}
 --- !u!1 &597577535
 GameObject:
   m_ObjectHideFlags: 0
@@ -4959,8 +4964,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449761387796815495, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
       propertyPath: audioSources.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1449761387796815495, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
+      propertyPath: audioSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 500595272}
     - target: {fileID: 1449761387796815495, guid: d4f1893c7135ca34f805ac826a5e5973, type: 3}
       propertyPath: particleSystems.Array.size
       value: 0
@@ -7182,6 +7191,11 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!82 &865500827 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3662306613636473624, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
+  m_PrefabInstance: {fileID: 1920730035}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &891766790
 GameObject:
   m_ObjectHideFlags: 0
@@ -8768,8 +8782,8 @@ MonoBehaviour:
   cameraBase: {fileID: 1621984774}
   roomCentre: {fileID: 2035072479}
   roomIndicator: {fileID: 602041269}
-  activeColour: {r: 0.34509805, g: 0.7529412, b: 0.3372549, a: 1}
-  inactiveColour: {r: 0.1882353, g: 0.28235295, b: 0.18431373, a: 1}
+  activeColour: {r: 0.17225882, g: 0.38791043, b: 0.745283, a: 1}
+  inactiveColour: {r: 0.11044855, g: 0.12192736, b: 0.3207547, a: 1}
 --- !u!1 &1073737555
 GameObject:
   m_ObjectHideFlags: 0
@@ -10412,15 +10426,15 @@ PrefabInstance:
     - target: {fileID: 8871684341852038630, guid: 74e99a7c88c587c489a041c935fc8d2b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e4e9686d711088b40bfa46de356808a4, type: 2}
+      objectReference: {fileID: 2100000, guid: cdc343ec302051e47affc8456f5eeef2, type: 2}
     - target: {fileID: 8871684342580422458, guid: 74e99a7c88c587c489a041c935fc8d2b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e4e9686d711088b40bfa46de356808a4, type: 2}
+      objectReference: {fileID: 2100000, guid: cdc343ec302051e47affc8456f5eeef2, type: 2}
     - target: {fileID: 8871684343430866711, guid: 74e99a7c88c587c489a041c935fc8d2b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e4e9686d711088b40bfa46de356808a4, type: 2}
+      objectReference: {fileID: 2100000, guid: cdc343ec302051e47affc8456f5eeef2, type: 2}
     m_RemovedComponents:
     - {fileID: 4240481522573921982, guid: 74e99a7c88c587c489a041c935fc8d2b, type: 3}
     - {fileID: 4240481523197906579, guid: 74e99a7c88c587c489a041c935fc8d2b, type: 3}
@@ -11100,8 +11114,8 @@ MonoBehaviour:
   cameraBase: {fileID: 2118427054}
   roomCentre: {fileID: 848326378}
   roomIndicator: {fileID: 896349618}
-  activeColour: {r: 0.34509805, g: 0.7529412, b: 0.3372549, a: 1}
-  inactiveColour: {r: 0.1882353, g: 0.28235295, b: 0.18431373, a: 1}
+  activeColour: {r: 0.17225882, g: 0.38791043, b: 0.745283, a: 1}
+  inactiveColour: {r: 0.11044855, g: 0.12192736, b: 0.3207547, a: 1}
 --- !u!1 &1493642529
 GameObject:
   m_ObjectHideFlags: 0
@@ -12670,8 +12684,8 @@ MonoBehaviour:
   cameraBase: {fileID: 431678552}
   roomCentre: {fileID: 1798851983}
   roomIndicator: {fileID: 351911212}
-  activeColour: {r: 0.34432393, g: 0.754717, b: 0.33819866, a: 1}
-  inactiveColour: {r: 0.18807311, g: 0.2830189, b: 0.18289427, a: 1}
+  activeColour: {r: 0.17225882, g: 0.38791043, b: 0.745283, a: 1}
+  inactiveColour: {r: 0.11044855, g: 0.12192736, b: 0.3207547, a: 1}
 --- !u!1 &1666563593
 GameObject:
   m_ObjectHideFlags: 0
@@ -12819,8 +12833,8 @@ MonoBehaviour:
   cameraBase: {fileID: 1039492538}
   roomCentre: {fileID: 180499527}
   roomIndicator: {fileID: 1733032414}
-  activeColour: {r: 0.34509805, g: 0.7529412, b: 0.3372549, a: 1}
-  inactiveColour: {r: 0.1882353, g: 0.28235295, b: 0.18431373, a: 1}
+  activeColour: {r: 0.17225882, g: 0.38791043, b: 0.745283, a: 1}
+  inactiveColour: {r: 0.11044855, g: 0.12192736, b: 0.3207547, a: 1}
 --- !u!1 &1688944622
 GameObject:
   m_ObjectHideFlags: 0
@@ -15716,8 +15730,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 962116742554985791, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
       propertyPath: audioSources.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 962116742554985791, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
+      propertyPath: audioSources.Array.data[0]
+      value: 
+      objectReference: {fileID: 865500827}
     - target: {fileID: 1087676568713838063, guid: 54788671eee29c444bf9c2af0c2e4580, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -16886,8 +16904,8 @@ MonoBehaviour:
   cameraBase: {fileID: 633370866}
   roomCentre: {fileID: 856810323}
   roomIndicator: {fileID: 2065392774}
-  activeColour: {r: 0.34509805, g: 0.7529412, b: 0.3372549, a: 1}
-  inactiveColour: {r: 0.1882353, g: 0.28235295, b: 0.18431373, a: 1}
+  activeColour: {r: 0.17225882, g: 0.38791043, b: 0.745283, a: 1}
+  inactiveColour: {r: 0.11044855, g: 0.12192736, b: 0.3207547, a: 1}
 --- !u!1 &2114621091
 GameObject:
   m_ObjectHideFlags: 0
