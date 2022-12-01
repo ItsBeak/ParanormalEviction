@@ -10,6 +10,9 @@ public class ShaderDistance : MonoBehaviour
 
     Transform player;
 
+    public Vector3 playerPos;
+    public Vector3 objectPos;
+
     void Start()
     {
         rend = GetComponent<MeshRenderer>();
@@ -27,9 +30,14 @@ public class ShaderDistance : MonoBehaviour
             return;
         }
 
-        rend.material.SetFloat("PlayerPositionX", player.position.x);
-        rend.material.SetFloat("PlayerPositionZ", player.position.z);
-        rend.material.SetFloat("ObjectPositionX", transform.position.x);
-        rend.material.SetFloat("ObjectPositionZ", transform.position.z);
+        playerPos = player.position;
+        playerPos.y = 0;
+
+        objectPos = transform.position;
+        objectPos.y = 0;
+
+        rend.material.SetFloat("PlayerToObjectDistance", Vector3.Distance(playerPos, objectPos));
+
+
     }
 }
