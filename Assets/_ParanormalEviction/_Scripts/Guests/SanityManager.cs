@@ -12,11 +12,18 @@ public class SanityManager : MonoBehaviour
 
     public float sanityLevelMax = 100f;
 
+    AudioSource source;
+    GuestAppearance app;
+
+    public AudioClip[] maleScreams, femaleScreams;
+
 
     private void Start()
     {
         sanityLevel = sanityLevelMax;
         Guest = GetComponent<AIMovement>();
+        source = GetComponent<AudioSource>();
+        app = GetComponent<GuestAppearance>();
     }
 
     private void Update()
@@ -50,8 +57,18 @@ public class SanityManager : MonoBehaviour
             if (Guest.Idle == true) { sanityLevel -= amount * 1.5f; }
             else {sanityLevel -= amount; }   
             
-            gauge.SetFillAmount(sanityLevel); 
-                     
+            gauge.SetFillAmount(sanityLevel);
+            
+            if (app.isMale)
+            {
+                source.PlayOneShot(maleScreams[Random.Range(0, maleScreams.Length)]);
+            }
+            else
+            {
+                source.PlayOneShot(femaleScreams[Random.Range(0, femaleScreams.Length)]);
+            }
+
+
         }
         Guest.Scared = true;
     }

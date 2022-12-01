@@ -27,6 +27,8 @@ public class GuestAppearance : MonoBehaviour
     public SkinnedMeshRenderer skirt;
     public SkinnedMeshRenderer cuffs;
 
+    [HideInInspector] public bool isMale;
+
     void Start()
     {
         RandomizeAppearance();
@@ -57,6 +59,8 @@ public class GuestAppearance : MonoBehaviour
             maleClothes.SetActive(true);
             femaleClothes.SetActive(false);
 
+            isMale = true;
+
         }
         else
         {
@@ -69,6 +73,8 @@ public class GuestAppearance : MonoBehaviour
 
             maleClothes.SetActive(false);
             femaleClothes.SetActive(true);
+
+            isMale = false;
 
         }
     }
