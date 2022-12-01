@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f5720a00cd27e43a0af63e221f23d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {x: 0, y: 0, z: 0}
+  objectPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &7272507441556631439
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -101,7 +103,7 @@ PrefabInstance:
     - target: {fileID: 8616339804106186443, guid: 43ce98c15b3c608429a67423c283c561, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 36c2710c966e3e04fa59c1d507ff1b79, type: 2}
+      objectReference: {fileID: 2100000, guid: cdc343ec302051e47affc8456f5eeef2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43ce98c15b3c608429a67423c283c561, type: 3}
 --- !u!4 &7162864714582804580 stripped
