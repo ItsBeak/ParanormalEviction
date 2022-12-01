@@ -38,9 +38,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         guestDisplay.text = (guestTarget - tracker.WinCount).ToString(); // + "/" + guestTarget.ToString()
-        timerFill.fillAmount = timer / gameTimeMax;
+        timerFill.fillAmount = 1 - (timer / gameTimeMax);
 
-        timerHand.rotation = Quaternion.Euler(0, 0, ((timer / gameTimeMax) * 90) - 90);
+        timerHand.rotation = Quaternion.Euler(0, 0, ((timer / gameTimeMax) * 90) * -1);
 
         timer -= 1 * Time.deltaTime;
 
