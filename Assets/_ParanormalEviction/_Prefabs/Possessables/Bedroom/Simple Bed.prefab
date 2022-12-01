@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scariness: 25
-  scareRadius: 3
+  scareRadius: 3.5
   cooldownTime: 20
   timeBeforeScareTrigger: 0.2
   animators:
@@ -182,6 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f5720a00cd27e43a0af63e221f23d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {x: 0, y: 0, z: 0}
+  objectPos: {x: 0, y: 0, z: 0}
 --- !u!114 &1021298154243041504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +196,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f5720a00cd27e43a0af63e221f23d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {x: 0, y: 0, z: 0}
+  objectPos: {x: 0, y: 0, z: 0}
 --- !u!95 &9131028726145147675
 Animator:
   serializedVersion: 3
@@ -225,6 +229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f5720a00cd27e43a0af63e221f23d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {x: 0, y: 0, z: 0}
+  objectPos: {x: 0, y: 0, z: 0}
 --- !u!114 &2038931679225099819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +243,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49f5720a00cd27e43a0af63e221f23d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerPos: {x: 0, y: 0, z: 0}
+  objectPos: {x: 0, y: 0, z: 0}
 --- !u!1001 &6029115815600063153
 PrefabInstance:
   m_ObjectHideFlags: 0
