@@ -39,18 +39,33 @@ public class Possesable : MonoBehaviour
     bool canPossess;
     bool cooldown;
 
+    public static Button interact;
+
     public void Start()
     {
         timer = 0;
         interactionDisplay = GameObject.Find("DoorReadout").GetComponent<Text>();
+
+        if (interact == null)
+        {
+            interact = FindObjectOfType<IntereactionButtons>().Interact;
+
+        }
+    }
+
+    void Possess()
+    {
+        Possesion.Instance.Active = this;
+        Debug.LogWarning("Setting active object");
+        interact.onClick.RemoveListener(Possess);
+        canPossess = false;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && canPossess)
         {
-            Possesion.Instance.Active = this;
-            Debug.LogWarning("Setting active object");
+            Possess();
         }
 
         timer -= Time.deltaTime;
@@ -70,10 +85,13 @@ public class Possesable : MonoBehaviour
             {
                 canPossess = true;
                 interactionDisplay.text = "Press E to Possess";
+
+                interact.onClick.AddListener(Possess);
             }
             else
             {
                 canPossess = false;
+                interact.onClick.RemoveListener(Possess);
             }
         }
     }
@@ -84,6 +102,7 @@ public class Possesable : MonoBehaviour
         {
             canPossess = false;
             interactionDisplay.text = "";
+            interact.onClick.RemoveListener(Possess);
         }
     }
 
