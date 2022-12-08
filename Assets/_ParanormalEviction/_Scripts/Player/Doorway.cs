@@ -25,12 +25,28 @@ public class Doorway : MonoBehaviour
 
     public Text doorReadout;
 
+    public static Button interact;
+
     void Start()
     {
         rend.material = contactFalse;
         doorReadout.text = "";
         doorReadout = GameObject.Find("DoorReadout").GetComponent<Text>();
         source = GetComponent<AudioSource>();
+
+        if (interact == null)
+        {
+            interact = FindObjectOfType<IntereactionButtons>().Interact;
+
+        }
+    }
+
+    void EnterDoor()
+    {
+       
+        interact.onClick.RemoveListener(EnterDoor);
+        RoomManager.Instance.ChangeRoom(targetRoom, locationID);
+        source.PlayOneShot(doorClip);
     }
 
     void Update()
@@ -38,8 +54,7 @@ public class Doorway : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.E) && contact)
         {
-            RoomManager.Instance.ChangeRoom(targetRoom, locationID);
-            source.PlayOneShot(doorClip);
+            EnterDoor();
         }
     }
 
@@ -51,6 +66,7 @@ public class Doorway : MonoBehaviour
             rend.material = contactTrue;
             doorReadout.text = "Press E to Enter Door";
             RoomManager.Instance.isInDoorway = true;
+            interact.onClick.AddListener(EnterDoor);
         }
     }
 
@@ -62,6 +78,7 @@ public class Doorway : MonoBehaviour
             rend.material = contactFalse;
             doorReadout.text = "";
             RoomManager.Instance.isInDoorway = false;
+            interact.onClick.RemoveListener(EnterDoor);
         }
     }
 

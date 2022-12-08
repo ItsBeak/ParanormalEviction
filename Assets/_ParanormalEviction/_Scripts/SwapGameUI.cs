@@ -6,6 +6,7 @@ public class SwapGameUI : MonoBehaviour
 {
     public GameObject GameUI;
     public GameObject MobileUI;
+    public GameObject Rooms;
 
     public Image timerFill;
     public Transform timerHand;
@@ -20,6 +21,8 @@ public class SwapGameUI : MonoBehaviour
         Access.timerFill = timerFill;
         MobileUI.SetActive(true);
         GameUI.SetActive(false);
+
+        //Rooms.GetComponentsInChildren<Possesable> 
     }
 
 #endif

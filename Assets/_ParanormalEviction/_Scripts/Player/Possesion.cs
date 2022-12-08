@@ -6,9 +6,11 @@ public class Possesion : MonoBehaviour
 {
     public Possesable Active;
     public SkinnedMeshRenderer rend;
+    public GameObject ScareButton;
+    public GameObject MovementButtons;
     PlayerMovement movement;
     bool Possesing;
-    public static Possesion Instance { get; private set;}
+    public static Possesion Instance { get; private set; }
 
     [Header("Audio")]
     AudioSource source;
@@ -25,12 +27,29 @@ public class Possesion : MonoBehaviour
         ghostFadeAmount = 1f;
     }
 
-    
+    public void TogglePosses()
+    {
+#if UNITY_ANDROID
+ 
+                    Active = null;
+                    Possesing = false;
+                    source.PlayOneShot(possessExit);
+        Possesable.interact.onClick.RemoveListener(TogglePosses);
+#endif
+    }
+
     public void LateUpdate()
     {
 
         if (Active)
         {
+            if (Possesing == false)
+            {
+                Possesing = true;
+                source.PlayOneShot(possessEnter);
+                Possesable.interact.onClick.AddListener(TogglePosses);
+            }
+
             movement.CanMove = false;
 
             Active.interactionDisplay.text = "Press Space to Scare";
@@ -54,7 +73,7 @@ public class Possesion : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Active.TriggerScare();
+                Scare();
                 
 
             }
@@ -66,6 +85,7 @@ public class Possesion : MonoBehaviour
         }
 
     }
+
 
     private void Update()
     {
@@ -107,5 +127,14 @@ public class Possesion : MonoBehaviour
             Instance = this;
         }
     }
+#if UNITY_ANDROID
+    public void SetScareButton()
+    {
+        ScareButton.SetActive(!Possesing);
+        MovementButtons.SetActive(Possesing);
 
+    }
+
+    public void Scare(){ Active.TriggerScare(); }
+#endif
 }
